@@ -1,0 +1,206 @@
+﻿  [11/17/17 11:39:27] Processing nucleo_f429zi (platform: ststm32; board: nucleo_f429zi; framework: mbed)
+  
+  PackageManager: Installing toolchain-gccarmnoneeabi @ >=1.60301.0
+  Downloading...
+  Unpacking...
+  Verbose mode can be enabled via `-v, --verbose` option
+  Collected 22 compatible libraries
+  Looking for dependencies...
+  No dependencies
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\AnalogIn.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\BusIn.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\BusInOut.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\BusOut.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\CAN.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\Ethernet.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\FlashIAP.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\I2C.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\I2CSlave.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\InterruptIn.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\InterruptManager.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\RawSerial.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\SPI.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\SPISlave.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\Serial.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\SerialBase.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\Ticker.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\Timeout.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\Timer.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\TimerEvent.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\drivers\UARTSerial.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\hal\mbed_flash_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\hal\mbed_gpio.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\hal\mbed_lp_ticker_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\hal\mbed_pinmap_common.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\hal\mbed_sleep_manager.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\hal\mbed_ticker_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\hal\mbed_us_ticker_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\ATCmdParser.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\CallChain.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\FileBase.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\FileHandle.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\FilePath.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\FileSystemHandle.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\LocalFileSystem.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\Stream.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_alloc_wrappers.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_application.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_assert.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_board.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_critical.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_error.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_interface.o
+  C:\SPB_Data\.platformio\packages\framework-mbed\platform\mbed_critical.c: In function 'core_util_critical_section_exit':
+  C:\SPB_Data\.platformio\packages\framework-mbed\platform\mbed_critical.c:86:14: warning: unused variable 'interrupts_disabled' [-Wunused-variable]
+  bool interrupts_disabled = !core_util_are_interrupts_enabled(); /* get the current interrupt disabled state */
+  ^~~~~~~~~~~~~~~~~~~
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_mem_trace.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_mktime.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_poll.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_retarget.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_rtc_time.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_sdk_boot.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_semihost_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_stats.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_wait_api_no_rtos.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\platform\mbed_wait_api_rtos.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F429xI\TARGET_NUCLEO_F429ZI\PeripheralPins.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F429xI\TARGET_NUCLEO_F429ZI\system_clock.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F429xI\device\TOOLCHAIN_GCC_ARM\startup_stm32f429xx.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F429xI\device\system_init_pre.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\analogin_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\analogout_device.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\hal_init_pre.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_can.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cec.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cortex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_crc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dfsdm.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma2d.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dsi.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_eth.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ramfunc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_gpio.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hcd.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_irda.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_iwdg.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_lptim.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_mmc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_msp_template.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nand.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nor.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pccard.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr_ex.o
+  C:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.c: In function 'PCD_WriteEmptyTxFifo':
+  C:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.c:1285:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if (len > ep->maxpacket)
+  ^
+  C:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.c:1300:13: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if (len > ep->maxpacket)
+  ^
+  C:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.c:1312:10: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(len <= 0U)
+  ^~
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_qspi.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rng.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sd.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sdram.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_smartcard.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spdifrx.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spi.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sram.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim_ex.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_uart.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_usart.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_wwdg.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_adc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_crc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_dac.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_dma.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_dma2d.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_exti.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fmc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fsmc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_gpio.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_i2c.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_lptim.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_pwr.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_rcc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_rng.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_rtc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_sdmmc.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_spi.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_tim.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_usart.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_usb.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_utils.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\device\system_stm32f4xx.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\flash_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\gpio_irq_device.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\pwmout_device.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\serial_device.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\TARGET_STM32F4\spi_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\analogout_api.o
+  C:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\serial_device.c: In function 'uart_irq':
+  C:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\serial_device.c:289:35: warning: unused variable 'tmpval' [-Wunused-variable]
+  volatile uint32_t tmpval = huart->Instance->DR; // Clear ORE flag
+  ^~~~~~
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\can_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\gpio_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\gpio_irq_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\hal_tick_16b.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\hal_tick_32b.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\i2c_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\lp_ticker.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\mbed_overrides.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\pinmap.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\port_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\pwmout_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\rtc_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\serial_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\sleep.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\stm_spi_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\trng_api.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\us_ticker_16b.o
+  Compiling .pioenvs\nucleo_f429zi\FrameworkMbedCore\targets\TARGET_STM\us_ticker_32b.o
+  Compiling .pioenvs\nucleo_f429zi\src\main.o
+  Generating LD script .pioenvs\nucleo_f429zi\STM32F429xI.ld.link_script.ld
+  Linking .pioenvs\nucleo_f429zi\firmware.elf
+  Calculating size .pioenvs\nucleo_f429zi\firmware.elf
+  Building .pioenvs\nucleo_f429zi\firmware.bin
+  text	   data	    bss	    dec	    hex	filename
+  10992	   2136	  58628	  71756	  1184c	.pioenvs\nucleo_f429zi\firmware.elf
+   [SUCCESS] Took 70.52 seconds 
