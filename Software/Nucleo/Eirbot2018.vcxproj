@@ -60,5 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Stepper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\CONSTANTES.h" />
+    <ClInclude Include="src\Stepper.h" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-﻿  [11/17/17 11:42:16] Processing nucleo_f429zi (platform: ststm32; board: nucleo_f429zi; framework: mbed)
+﻿  [11/27/17 13:05:06] Processing nucleo_f429zi (platform: ststm32; board: nucleo_f429zi; framework: mbed)
   
   Verbose mode can be enabled via `-v, --verbose` option
   Collected 22 compatible libraries
@@ -7,4 +7,4 @@
   Calculating size .pioenvs\nucleo_f429zi\firmware.elf
   text	   data	    bss	    dec	    hex	filename
   10992	   2136	  58628	  71756	  1184c	.pioenvs\nucleo_f429zi\firmware.elf
-   [SUCCESS] Took 3.67 seconds 
+   [SUCCESS] Took 4.49 seconds 
