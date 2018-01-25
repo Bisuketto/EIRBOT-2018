@@ -5,7 +5,7 @@ GUIWindow::GUIWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::GUIWindow)
 {
-    refresh_ports();
+    //refresh_ports();
     ui->setupUi(this);
 }
 
@@ -17,7 +17,7 @@ GUIWindow::~GUIWindow()
 void GUIWindow::obj_connect(){
     QObject::connect(ui->menuPort_COM, SIGNAL(hovered()), this, SLOT(refresh_ports()));
 }
-
+//CACA.wav bb.
 void GUIWindow::refresh_ports(){
     for(int i = 0; i < ui->menuPort_COM->actions().size(); i++){
         QAction *act_to_remove = ui->menuPort_COM->actions.at(i);

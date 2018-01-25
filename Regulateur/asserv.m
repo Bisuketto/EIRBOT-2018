@@ -1,74 +1,97 @@
-clear all;
+%clear all;
 close all;
 clc;
 
 s = tf('s');
+%% Def procédé test
+J = 35.9e-7;
+f = 0.001109;
+K = 0.0199;
+R = 0.358;
+L = 0.7e-3;
+s = tf('s');
+%%P_motor = K/(s*((J*s+f)*(L*s+R)+K^2));
+
 
 %% Définition du procédé
+fe = 5000;
 te = 195e-6;
 tm = 3.24e-3;
-K = 479*2*pi()/60; %rad.s-1
-G = K/(s*(1+te*s)*(1+tm*s));
+Reduc = 2.1428;
+ecart_roue = 285;
+Kreduc = 1/5.8;
+Kroue = 94.24*2.1428; %mm.tr^-1
+Vmax = 18;
+Smax = 250;
+wu = (1/(3*tm))*2*pi;
+Kang = 1/ecart_roue;
 
-%% Définition des paramètres
-wu = 10/tm;
-ti = 10/wu;
-Tf = 1/(10*wu);
-I = (1+ti*s)/(ti*s);
-F = 1/(1+Tf*s);
-[GAIN_IFU, PHASE_IFU] = bode(G*I*F, wu);
-MF = 75;
-PhiM = (MF - 180 - PHASE_IFU)/2;
-a = (1+sin(PhiM*pi()/180))/(1-sin(PhiM*pi()/180));
-ta = sqrt(a)/wu;
-tb = 1/(sqrt(a)*wu);
+%%J = 35.9e-7;
+%%f = 0.001109;
+%%K = 0.0199;
+%%R = 0.358;
+%%L = 0.07e-3;
+%%s = tf('s');
+G = K/(s*((J*s+f)));
 
-D = ((1+(sqrt(a)/wu)*s)/(1+(1/(sqrt(a)*wu))*s));
-[GAIN_DDU, PHASE_DDU] = bode(D*D, wu);
-
-P = 1/(GAIN_IFU*GAIN_DDU);
-
+G01 = c2d(Kreduc*Kroue*G, 1/fe, 'zoh');
+G02 = c2d(Kang*Kreduc*Kroue*G, 1/fe, 'zoh');
+G01 = d2c(G01, 'Tustin');
+G02 = d2c(G02, 'Tustin');
 
 %% Définition du Correcteur
-C = P*D*D*I*F;
+[C_pos, Pm1, wa1, wb1] = Regu_calc(G01, 2*fe*tan(wu/(2*fe)), 10, 80);
+[C_ang, Pm2, wa2, wb2] = Regu_calc(G02, 2*fe*tan(wu/(2*fe)), 10, 80);
+
 figure();
-bode(I);
+bode(C_pos);
+grid on;
+
 figure();
-bode(D*D);
-figure();
-bode(F);
-figure();
-bode(C);
+bode(C_ang);
+grid on;
 
 %% Affichage FTBO
-figure();
-margin(G*C);
-figure();
-bode(C*G/(1+C*G));
+FTBO = G01*C_pos;
+FTBF = FTBO/(1+FTBO);
 
 figure();
-step(G);
+margin(FTBO);
+figure();
+bode(FTBF);
 
 figure();
-step(C*G/(1+C*G));
+step(FTBF);
 figure();
-nyquist(C*G);
+nyquist(FTBO);
 figure();
-nichols(C*G);
+nichols(FTBO);
 
 %% Transformée en z du régulateur
-Tech = 0.00020358;
-TZ = c2d(C, Tech, 'Method', 'zoh');
-REGULATEUR = tf(TZ.Numerator{1,1}, TZ.Denominator{1,1}, Tech, 'variable', 'z^-1')
+%close all;
+Tech = 1/fe ;
+TZ1 = c2d(C_pos, Tech, 'Tustin');
+TZ2 = c2d(C_ang, Tech, 'Tustin');
+REGULATEUR1 = tf(TZ1.Numerator{1,1}, TZ1.Denominator{1,1}, Tech, 'variable', 'z^-1')
+REGULATEUR2 = tf(TZ2.Numerator{1,1}, TZ2.Denominator{1,1}, Tech, 'variable', 'z^-1');
 fileID = fopen('REGU_CST.hpp', 'w');
-MAXORDER = max(length(REGULATEUR.Numerator{1,1}), length(REGULATEUR.Denominator{1,1}));
-fprintf(fileID, '#define TAILLE_TABLEAUX %d\n', MAXORDER);
-format = '%f';
-for i = 2 : MAXORDER
-    format = strcat(format, ',%f ');
+MAXORDER1 = max(length(REGULATEUR1.Numerator{1,1}), length(REGULATEUR1.Denominator{1,1}));
+MAXORDER2 = max(length(REGULATEUR2.Numerator{1,1}), length(REGULATEUR2.Denominator{1,1}));
+fprintf(fileID, '#define TAILLE_TABLEAUX_POS %d\n', MAXORDER1);
+fprintf(fileID, '#define TAILLE_TABLEAUX_ANG %d\n', MAXORDER2);
+fprintf(fileID, '#define TECH %f\n', Tech);
+format1 = '%f';
+for i = 2 : MAXORDER1
+    format1 = strcat(format1, ',%f ');
 end
-fprintf(fileID, strcat('#define XCOEFFS { ', format, '}\n'), REGULATEUR.Numerator{1,1});
-fprintf(fileID, strcat('#define YCOEFFS { ', format, '}\n'), REGULATEUR.Denominator{1,1});
+fprintf(fileID, strcat('#define XCOEFFS_POS { ', format1, '}\n'), REGULATEUR1.Numerator{1,1});
+fprintf(fileID, strcat('#define YCOEFFS_POS { ', format1, '}\n'), REGULATEUR1.Denominator{1,1});
+format2 = '%f';
+for i = 2 : MAXORDER2
+    format2 = strcat(format2, ',%f ');
+end
+fprintf(fileID, strcat('#define XCOEFFS_ANG { ', format2, '}\n'), REGULATEUR2.Numerator{1,1});
+fprintf(fileID, strcat('#define YCOEFFS_ANG { ', format2, '}\n'), REGULATEUR2.Denominator{1,1});
 fclose(fileID);
 %zsysy = zpk(REGULATEUR)
 %zplane(zsysy.Z{1,1}, zsysy.P{1,1})
