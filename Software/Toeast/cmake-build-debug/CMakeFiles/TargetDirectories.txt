@@ -1,0 +1,11 @@
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/PLATFORMIO_UPLOADFS.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/PLATFORMIO_BUILD.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/PLATFORMIO_UPLOAD.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/PLATFORMIO_CLEAN.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/PLATFORMIO_TEST.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/Toeast.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/PLATFORMIO_PROGRAM.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/PLATFORMIO_UPDATE_ALL.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/CMakeFiles/rebuild_cache.dir

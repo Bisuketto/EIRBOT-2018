@@ -70,10 +70,19 @@
            <height>0</height>
           </size>
          </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+         </property>
         </widget>
        </item>
        <item>
-        <widget class="QListView" name="listView"/>
+        <widget class="QTableWidget" name="tableWidget"/>
        </item>
       </layout>
      </item>
@@ -166,14 +175,16 @@
      <property name="title">
       <string>Port COM</string>
      </property>
+     <addaction name="actionRefresh"/>
+     <addaction name="separator"/>
     </widget>
     <addaction name="menuPort_COM"/>
    </widget>
    <addaction name="menuOptions"/>
   </widget>
-  <action name="actionBlup">
+  <action name="actionRefresh">
    <property name="text">
-    <string>Blup</string>
+    <string>Refresh</string>
    </property>
   </action>
  </widget>

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GUIWindow_t {
-    QByteArrayData data[3];
-    char stringdata0[25];
+    QByteArrayData data[8];
+    char stringdata0[67];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,10 +33,16 @@ static const qt_meta_stringdata_GUIWindow_t qt_meta_stringdata_GUIWindow = {
     {
 QT_MOC_LITERAL(0, 0, 9), // "GUIWindow"
 QT_MOC_LITERAL(1, 10, 13), // "refresh_ports"
-QT_MOC_LITERAL(2, 24, 0) // ""
+QT_MOC_LITERAL(2, 24, 0), // ""
+QT_MOC_LITERAL(3, 25, 9), // "connexion"
+QT_MOC_LITERAL(4, 35, 9), // "comSelect"
+QT_MOC_LITERAL(5, 45, 8), // "QAction*"
+QT_MOC_LITERAL(6, 54, 4), // "_act"
+QT_MOC_LITERAL(7, 59, 7) // "readCom"
 
     },
-    "GUIWindow\0refresh_ports\0"
+    "GUIWindow\0refresh_ports\0\0connexion\0"
+    "comSelect\0QAction*\0_act\0readCom"
 };
 #undef QT_MOC_LITERAL
 
@@ -46,7 +52,7 @@ static const uint qt_meta_data_GUIWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -54,9 +60,15 @@ static const uint qt_meta_data_GUIWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x0a /* Public */,
+       1,    0,   34,    2, 0x0a /* Public */,
+       3,    0,   35,    2, 0x0a /* Public */,
+       4,    1,   36,    2, 0x0a /* Public */,
+       7,    0,   39,    2, 0x0a /* Public */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 5,    6,
     QMetaType::Void,
 
        0        // eod
@@ -69,10 +81,23 @@ void GUIWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->refresh_ports(); break;
+        case 1: _t->connexion(); break;
+        case 2: _t->comSelect((*reinterpret_cast< QAction*(*)>(_a[1]))); break;
+        case 3: _t->readCom(); break;
         default: ;
         }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+        case 2:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+            case 0:
+                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QAction* >(); break;
+            }
+            break;
+        }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObject GUIWindow::staticMetaObject = {
@@ -100,13 +125,13 @@ int GUIWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
-            *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        if (_id < 4)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 4;
     }
     return _id;
 }

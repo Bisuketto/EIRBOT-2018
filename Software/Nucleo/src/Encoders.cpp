@@ -37,6 +37,7 @@ Encoders::Encoders(float x0, float y0, float theta_i) {
 Encoders::Encoders(Serial *pcOut) {
 	debug = true;
 	pc = pcOut;
+	pc->printf("\tEncoders Initialisation\n");
 	impEncD = 0;
 	impEncG = 0;
 	TIM3_EncoderInit();
@@ -50,6 +51,13 @@ Encoders::Encoders(Serial *pcOut) {
 	x = 0;
 	y = 0;
 	theta0 = 0;
+	Timer twait;
+	twait.start();
+	while (twait.read_ms() < 3000);
+	pc->printf("\tENCL : %d ENCR : %d\n", impEncG, impEncD);
+	impEncD = 0;
+	impEncG = 0;
+	pc->printf("\tEncoders : [Ok]\n");
 }
 
 int Encoders::getImpEncR()
@@ -87,11 +95,11 @@ void Encoders::routine_Encoders()
 }
 
 void Encoders::odometrie() {
-	theta = theta0 + ((dtot_d - dtot_g)*PERIMETER / RESOLUTION)/(2*RADIUS_ENC);
+	theta = theta0 + ((dtot_d - dtot_g)*PERIMETER / RESOLUTION) / (2 * RADIUS_ENC);
 	dl = ((dld + dlg)*PERIMETER / RESOLUTION) / 2;
 
-	x += -dl*sinf(theta);
-	y +=  dl*cosf(theta);
+	x +=  dl*cosf(theta);
+	y +=  dl*sinf(theta);
 }
 
 float Encoders::getX() {
@@ -103,19 +111,28 @@ float Encoders::getY() {
 }
 
 float Encoders::getTheta() {
-	return theta;
+	if (theta > PI)
+		return -PI + fmod(theta, PI);
+	else if (theta < -PI)
+		return PI + fmod(theta, PI);
+	else
+		return theta;
 }
 
-float Encoders::getDr() {
+int Encoders::getDr() {
 	return dtot_d;
 }
 
-float Encoders::getDl() {
+int Encoders::getDl() {
 	return dtot_g;
 }
 
 float Encoders::last_changed() {
 	return t_changed->read_ms();
+}
+
+void Encoders::reset_changed() {
+	t_changed->reset();
 }
 
 void Encoders::TIM3_EncoderInit() {

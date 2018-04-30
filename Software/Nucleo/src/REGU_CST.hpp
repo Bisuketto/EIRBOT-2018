@@ -1,4 +1,7 @@
-#pragma once
+#ifndef REGU_CST_H
+#define REGU_CST_H
+
+/*
 
 #define TAILLE_TABLEAUX_POS 5
 #define TAILLE_TABLEAUX_ANG 5
@@ -7,3 +10,40 @@
 #define YCOEFFS_POS {1.000000, -1.334, -0.1061, 0.4404, 0}
 #define XCOEFFS_ANG {0.000000, 0.0363, -0.03429, -0.03627, 0.03432}
 #define YCOEFFS_ANG {1.000000, -1.334, -0.1061, 0.4404, 0}
+
+*/
+
+#if defined(MAIN_BOT)
+	#pragma message("Using main bot regulator coefficients")
+	
+	#define TAILLE_TABLEAUX_POS 5
+	#define TAILLE_TABLEAUX_ANG 5
+	#define TECH 0.003 //0.00020358
+	#define XCOEFFS_POS {0.000000, 0.07259, -0.06858, -0.07254, 0.06863}
+	#define YCOEFFS_POS {1.000000, -1.334, -0.1061, 0.4404, 0}
+	#define XCOEFFS_ANG {0.000000, 0.0363, -0.03429, -0.03627, 0.03432}
+	#define YCOEFFS_ANG {1.000000, -1.334, -0.1061, 0.4404, 0}
+	
+/*#define TAILLE_TABLEAUX_POS 4
+#define TAILLE_TABLEAUX_ANG 4
+#define TECH 0.005000
+#define XCOEFFS_POS {0.000060,-4.506222e-05f,-6.035786e-05f,4.506529e-05f}
+#define YCOEFFS_POS {1.000000,-2.988256e+00f,2.976522e+00f,-9.882663e-01f}
+#define XCOEFFS_ANG {0.000355,-3.237639e-04f,-3.550410e-04f,3.238320e-04f}
+#define YCOEFFS_ANG {1.000000,-2.998170e+00f,2.996342e+00f,-9.981713e-01f}*/
+	
+#elif defined(ANNEX_BOT)
+
+#else
+	#pragma message("Using default bot regulator coefficients")
+	#define TAILLE_TABLEAUX_POS 4
+	#define TAILLE_TABLEAUX_ANG 4
+	#define TECH 0.002000
+	#define XCOEFFS_POS {0.000000,4.677236e+00f,-8.350369e+00f,3.706347e+00f}
+	#define YCOEFFS_POS {1.000000,-1.153460e+00f,1.579156e-01f,-4.455981e-03f}
+	#define XCOEFFS_ANG {0.000000,1.333012e+03f,-2.379855e+03f,1.056309e+03f}
+	#define YCOEFFS_ANG {1.000000,-1.153460e+00f,1.579156e-01f,-4.455981e-03f}
+
+#endif
+
+#endif

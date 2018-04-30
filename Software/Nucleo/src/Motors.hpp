@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MOTORS_H
+#define MOTORS_H
 
 #include "mbed.h"
 #include "REGU_CST.hpp"
@@ -6,7 +7,9 @@
 #include "PINOUT.hpp"
 #include "Encoders.hpp"
 #include "Navigator.hpp"
+#include "Telemetry.hpp"
 #include <math.h>
+#include <vector>
 
 class Navigator;
 
@@ -21,6 +24,10 @@ class Motors {
 		*/
 		Motors(PinName _pwmL, PinName _pwmR, PinName _dirL, PinName _dirR, Serial* _debug);
 		/*
+			Motor controller with Telemetry enabled
+		*/
+		Motors(PinName _pwmL, PinName _pwmR, PinName _dirL, PinName _dirR, Telemetry* _telem);
+		/*
 			Go to Point (x,y) Rectilinear Speed QuadRamp mode
 		*/
 		void go_to_RSQR(float _x, float _y);
@@ -28,6 +35,10 @@ class Motors {
 			Rotation of _ang rads
 		*/
 		void rotate(float _ang);
+		/*
+			Crado
+		*/
+		void go_to_Nul(float _dist, float _x, float _y);
 		/*
 			Set pointer to Encoders instance
 		*/
@@ -40,6 +51,9 @@ class Motors {
 			Stops immediately current job
 		*/
 		void hard_stop();
+
+		void identify(float _pwm_low, float _pwm_high, int _t1, float _period);
+		void identify_rotate(float _pwm_low, float _pwm_high, int _t1, float _period);
 		~Motors();
 
 	private:
@@ -54,21 +68,32 @@ class Motors {
 		float ang_reference_calculation();
 		void calc_pos_inter();
 		void to_H_bridgeable(float* _right_cmd, float* _left_cmd);
+		void saturation(float* _lin_spd, float* _ang_spd, float _sat_pos, float _sat_ang);
 		void dead_zone();
 		void stop();
 		void comStop();
 		int location();
 
+		void identifier_routine();
+		float mes[N_PTS];
+		float periode;
+		int index;
+
 		bool debug;
+		bool telemetry_en;
 		bool status;
 		bool RSQR;
 		bool ROT;
+		bool NUL;
+		int dist_r_init;
+		int dist_l_init;
 		float x_reference;
 		float y_reference;
 		float x_init;
 		float y_init;
 		float xi;
 		float yi;
+		float ang_init;
 		float theta_i;
 		float pos_reference;
 		float ang_reference;
@@ -78,6 +103,7 @@ class Motors {
 		float ang_err[TAILLE_TABLEAUX_ANG];
 		float* director[DIR_LENGTH];
 		Serial* serialOut;
+		Telemetry* instTelem;
 		Ticker* schedule_routine;
 		Ticker* schedule_infos;
 		Timer* t_cmd;
@@ -91,6 +117,7 @@ class Motors {
 		int dl;
 		float pwr;
 		float pwl;
-		float p0[DIM_PT];
 		float p_tmp[DIM_PT];
 };
+
+#endif

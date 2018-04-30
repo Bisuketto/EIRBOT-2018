@@ -25,8 +25,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        guiwindow.cpp
+        guiwindow.cpp \
+    crc32.cpp
 
-HEADERS  += guiwindow.hpp
+HEADERS  += guiwindow.hpp \
+    TELEM_CODE.hpp \
+    crc32.h
 
 FORMS    += guiwindow.ui

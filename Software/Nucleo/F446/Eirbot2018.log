@@ -1,0 +1,190 @@
+﻿  
+  
+  [02/20/18 17:56:41] Processing nucleo_f446re (platform: ststm32; board: nucleo_f446re; framework: mbed)
+  
+  PLATFORM: ST STM32 > ST Nucleo F446RE
+  SYSTEM: STM32F446RET6 180MHz 128KB RAM (512KB Flash)
+  DEBUG: CURRENT(stlink-v2-1) ON-BOARD(stlink-v2-1) EXTERNAL(blackmagic)
+  Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+  LDF MODES: FINDER(chain) COMPATIBILITY(light)
+  Collected 15 compatible libraries
+  Scanning dependencies...
+  No dependencies
+  arm-none-eabi-g++ -o .pioenvs\nucleo_f446re\src\Navigator.o -c -std=gnu++98 -fno-rtti -Wvla -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -c -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -fno-builtin -ffunction-sections -fdata-sections -funsigned-char -MMD -fno-delete-null-pointer-checks -fomit-frame-pointer -Os -DNDEBUG -include mbed_config.h -D__MBED__=1 -DDEVICE_I2CSLAVE=1 -D__FPU_PRESENT=1 -DDEVICE_PORTOUT=1 -DUSBHOST_OTHER -DDEVICE_PORTINOUT=1 -DTARGET_RTOS_M4_M7 -DDEVICE_LOWPOWERTIMER=1 -DDEVICE_RTC=1 -DTOOLCHAIN_object -DDEVICE_SERIAL_ASYNCH=1 -DTARGET_STM32F4 -D__CMSIS_RTOS -DTARGET_STM32F446xE -DTOOLCHAIN_GCC -DDEVICE_CAN=1 -DTARGET_CORTEX_M -DDEVICE_I2C_ASYNCH=1 -DTARGET_LIKE_CORTEX_M4 -DDEVICE_ANALOGOUT=1 -DTARGET_M4 -DTARGET_UVISOR_UNSUPPORTED -DDEVICE_SPI_ASYNCH=1 -DDEVICE_PWMOUT=1 -DDEVICE_INTERRUPTIN=1 -DTARGET_CORTEX -DDEVICE_I2C=1 -DTRANSACTION_QUEUE_SIZE_SPI=2 -D__CORTEX_M4 -DDEVICE_STDIO_MESSAGES=1 -DTARGET_FF_MORPHO -DTARGET_FAMILY_STM32 -DTARGET_FF_ARDUINO -DTARGET_STM32F446RE -DTARGET_RELEASE -DTARGET_STM -DDEVICE_SERIAL_FC=1 -DTARGET_LIKE_MBED -D__MBED_CMSIS_RTOS_CM -DDEVICE_SLEEP=1 -DTOOLCHAIN_GCC_ARM -DDEVICE_SPI=1 -DUSB_STM_HAL -DTARGET_NUCLEO_F446RE -DDEVICE_SPISLAVE=1 -DDEVICE_ANALOGIN=1 -DDEVICE_SERIAL=1 -DDEVICE_FLASH=1 -DDEVICE_PORTIN=1 -DMBED_BUILD_TIMESTAMP=1514051510.49 -DARM_MATH_CM4 -DSTM32F446xx -DPLATFORMIO=30502 -IC:\SPB_Data\.platformio\packages\framework-mbed -IC:\SPB_Data\.platformio\packages\framework-mbed\cmsis -IC:\SPB_Data\.platformio\packages\framework-mbed\cmsis\TARGET_CORTEX_M -IC:\SPB_Data\.platformio\packages\framework-mbed\drivers -IC:\SPB_Data\.platformio\packages\framework-mbed\hal -IC:\SPB_Data\.platformio\packages\framework-mbed\hal\storage_abstraction -IC:\SPB_Data\.platformio\packages\framework-mbed\platform -IC:\SPB_Data\.platformio\packages\framework-mbed\targets -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4 -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\device -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE\device -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE\device\TOOLCHAIN_GCC_ARM -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE\TARGET_NUCLEO_F446RE -IC:\SPB_Data\.platformio\packages\framework-mbed -IC:\SPB_Data\.platformio\packages\framework-mbed\platformio\variants\NUCLEO_F446RE -Isrc src\Navigator.cpp
+  arm-none-eabi-g++ -o .pioenvs\nucleo_f446re\src\main.o -c -std=gnu++98 -fno-rtti -Wvla -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -c -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -fno-builtin -ffunction-sections -fdata-sections -funsigned-char -MMD -fno-delete-null-pointer-checks -fomit-frame-pointer -Os -DNDEBUG -include mbed_config.h -D__MBED__=1 -DDEVICE_I2CSLAVE=1 -D__FPU_PRESENT=1 -DDEVICE_PORTOUT=1 -DUSBHOST_OTHER -DDEVICE_PORTINOUT=1 -DTARGET_RTOS_M4_M7 -DDEVICE_LOWPOWERTIMER=1 -DDEVICE_RTC=1 -DTOOLCHAIN_object -DDEVICE_SERIAL_ASYNCH=1 -DTARGET_STM32F4 -D__CMSIS_RTOS -DTARGET_STM32F446xE -DTOOLCHAIN_GCC -DDEVICE_CAN=1 -DTARGET_CORTEX_M -DDEVICE_I2C_ASYNCH=1 -DTARGET_LIKE_CORTEX_M4 -DDEVICE_ANALOGOUT=1 -DTARGET_M4 -DTARGET_UVISOR_UNSUPPORTED -DDEVICE_SPI_ASYNCH=1 -DDEVICE_PWMOUT=1 -DDEVICE_INTERRUPTIN=1 -DTARGET_CORTEX -DDEVICE_I2C=1 -DTRANSACTION_QUEUE_SIZE_SPI=2 -D__CORTEX_M4 -DDEVICE_STDIO_MESSAGES=1 -DTARGET_FF_MORPHO -DTARGET_FAMILY_STM32 -DTARGET_FF_ARDUINO -DTARGET_STM32F446RE -DTARGET_RELEASE -DTARGET_STM -DDEVICE_SERIAL_FC=1 -DTARGET_LIKE_MBED -D__MBED_CMSIS_RTOS_CM -DDEVICE_SLEEP=1 -DTOOLCHAIN_GCC_ARM -DDEVICE_SPI=1 -DUSB_STM_HAL -DTARGET_NUCLEO_F446RE -DDEVICE_SPISLAVE=1 -DDEVICE_ANALOGIN=1 -DDEVICE_SERIAL=1 -DDEVICE_FLASH=1 -DDEVICE_PORTIN=1 -DMBED_BUILD_TIMESTAMP=1514051510.49 -DARM_MATH_CM4 -DSTM32F446xx -DPLATFORMIO=30502 -IC:\SPB_Data\.platformio\packages\framework-mbed -IC:\SPB_Data\.platformio\packages\framework-mbed\cmsis -IC:\SPB_Data\.platformio\packages\framework-mbed\cmsis\TARGET_CORTEX_M -IC:\SPB_Data\.platformio\packages\framework-mbed\drivers -IC:\SPB_Data\.platformio\packages\framework-mbed\hal -IC:\SPB_Data\.platformio\packages\framework-mbed\hal\storage_abstraction -IC:\SPB_Data\.platformio\packages\framework-mbed\platform -IC:\SPB_Data\.platformio\packages\framework-mbed\targets -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4 -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\device -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE\device -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE\device\TOOLCHAIN_GCC_ARM -IC:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE\TARGET_NUCLEO_F446RE -IC:\SPB_Data\.platformio\packages\framework-mbed -IC:\SPB_Data\.platformio\packages\framework-mbed\platformio\variants\NUCLEO_F446RE -Isrc src\main.cpp
+  arm-none-eabi-cpp -E -P -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -Wl,--gc-sections -Wl,--wrap,main -Wl,--wrap,_malloc_r -Wl,--wrap,_free_r -Wl,--wrap,_realloc_r -Wl,--wrap,_memalign_r -Wl,--wrap,_calloc_r -Wl,--wrap,exit -Wl,--wrap,atexit -Wl,-n C:\SPB_Data\.platformio\packages\framework-mbed\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F446xE\device\TOOLCHAIN_GCC_ARM\STM32F446XE.ld -o .pioenvs\nucleo_f446re\STM32F446XE.ld.link_script.ld
+  In file included from src\Encoders.hpp:4:0,
+  from src\Navigator.hpp:3,
+  from src\Navigator.cpp:1:
+  src\Navigator.cpp: In constructor 'Navigator::Navigator()':
+  src\PINOUT.hpp:23:18: error: 'PB_11' was not declared in this scope
+  #define PIN_PWMD PB_11
+  ^
+  src\Navigator.cpp:7:36: note: in expansion of macro 'PIN_PWMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~
+  src\main.cpp: In function 'int main()':
+  src\main.cpp:10:8: warning: unused variable 'a' [-Wunused-variable]
+  float a = 273.150f;
+  ^
+  src\main.cpp:11:7: warning: unused variable 'bin' [-Wunused-variable]
+  char bin[4] = { 0, 0, 0, 0 };
+  ^~~
+  src\PINOUT.hpp:23:18: note: suggested alternative: 'PC_11'
+  #define PIN_PWMD PB_11
+  ^
+  src\Navigator.cpp:7:36: note: in expansion of macro 'PIN_PWMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~
+  src\PINOUT.hpp:26:20: error: 'PF_12' was not declared in this scope
+  #define PIN_SENSMG PF_12
+  ^
+  src\Navigator.cpp:7:46: note: in expansion of macro 'PIN_SENSMG'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:26:20: note: suggested alternative: 'PC_12'
+  #define PIN_SENSMG PF_12
+  ^
+  src\Navigator.cpp:7:46: note: in expansion of macro 'PIN_SENSMG'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:25:20: error: 'PF_13' was not declared in this scope
+  #define PIN_SENSMD PF_13
+  ^
+  src\Navigator.cpp:7:58: note: in expansion of macro 'PIN_SENSMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:25:20: note: suggested alternative: 'PC_13'
+  #define PIN_SENSMD PF_13
+  ^
+  src\Navigator.cpp:7:58: note: in expansion of macro 'PIN_SENSMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~~~
+  src\Navigator.cpp: In constructor 'Navigator::Navigator(mbed::Serial*)':
+  src\PINOUT.hpp:23:18: error: 'PB_11' was not declared in this scope
+  #define PIN_PWMD PB_11
+  ^
+  src\Navigator.cpp:20:36: note: in expansion of macro 'PIN_PWMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~
+  src\PINOUT.hpp:23:18: note: suggested alternative: 'PC_11'
+  #define PIN_PWMD PB_11
+  ^
+  src\Navigator.cpp:20:36: note: in expansion of macro 'PIN_PWMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~
+  src\PINOUT.hpp:26:20: error: 'PF_12' was not declared in this scope
+  #define PIN_SENSMG PF_12
+  ^
+  src\Navigator.cpp:20:46: note: in expansion of macro 'PIN_SENSMG'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:26:20: note: suggested alternative: 'PC_12'
+  #define PIN_SENSMG PF_12
+  ^
+  src\Navigator.cpp:20:46: note: in expansion of macro 'PIN_SENSMG'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:25:20: error: 'PF_13' was not declared in this scope
+  #define PIN_SENSMD PF_13
+  ^
+  src\Navigator.cpp:20:58: note: in expansion of macro 'PIN_SENSMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:25:20: note: suggested alternative: 'PC_13'
+  #define PIN_SENSMD PF_13
+  ^
+  src\Navigator.cpp:20:58: note: in expansion of macro 'PIN_SENSMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~~~
+  src\Navigator.cpp: In constructor 'Navigator::Navigator(float, float, float)':
+  src\PINOUT.hpp:23:18: error: 'PB_11' was not declared in this scope
+  #define PIN_PWMD PB_11
+  ^
+  src\Navigator.cpp:30:36: note: in expansion of macro 'PIN_PWMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~
+  src\PINOUT.hpp:23:18: note: suggested alternative: 'PC_11'
+  #define PIN_PWMD PB_11
+  ^
+  src\Navigator.cpp:30:36: note: in expansion of macro 'PIN_PWMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~
+  src\PINOUT.hpp:26:20: error: 'PF_12' was not declared in this scope
+  #define PIN_SENSMG PF_12
+  ^
+  src\Navigator.cpp:30:46: note: in expansion of macro 'PIN_SENSMG'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:26:20: note: suggested alternative: 'PC_12'
+  #define PIN_SENSMG PF_12
+  ^
+  src\Navigator.cpp:30:46: note: in expansion of macro 'PIN_SENSMG'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:25:20: error: 'PF_13' was not declared in this scope
+  #define PIN_SENSMD PF_13
+  ^
+  src\Navigator.cpp:30:58: note: in expansion of macro 'PIN_SENSMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:25:20: note: suggested alternative: 'PC_13'
+  #define PIN_SENSMD PF_13
+  ^
+  src\Navigator.cpp:30:58: note: in expansion of macro 'PIN_SENSMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
+  ^~~~~~~~~~
+  src\Navigator.cpp: In constructor 'Navigator::Navigator(float, float, float, mbed::Serial*)':
+  src\PINOUT.hpp:23:18: error: 'PB_11' was not declared in this scope
+  #define PIN_PWMD PB_11
+  ^
+  src\Navigator.cpp:42:36: note: in expansion of macro 'PIN_PWMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~
+  src\PINOUT.hpp:23:18: note: suggested alternative: 'PC_11'
+  #define PIN_PWMD PB_11
+  ^
+  src\Navigator.cpp:42:36: note: in expansion of macro 'PIN_PWMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~
+  src\PINOUT.hpp:26:20: error: 'PF_12' was not declared in this scope
+  #define PIN_SENSMG PF_12
+  ^
+  src\Navigator.cpp:42:46: note: in expansion of macro 'PIN_SENSMG'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:26:20: note: suggested alternative: 'PC_12'
+  #define PIN_SENSMG PF_12
+  ^
+  src\Navigator.cpp:42:46: note: in expansion of macro 'PIN_SENSMG'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:25:20: error: 'PF_13' was not declared in this scope
+  #define PIN_SENSMD PF_13
+  ^
+  src\Navigator.cpp:42:58: note: in expansion of macro 'PIN_SENSMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~~~
+  src\PINOUT.hpp:25:20: note: suggested alternative: 'PC_13'
+  #define PIN_SENSMD PF_13
+  ^
+  src\Navigator.cpp:42:58: note: in expansion of macro 'PIN_SENSMD'
+  instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
+  ^~~~~~~~~~
+  src\Navigator.cpp: In member function 'void Navigator::go_to_i()':
+  src\Navigator.cpp:78:8: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if (i < route->size()) {
+  ~~^~~~~~~~~~~~~~~
+  src\Navigator.cpp:81:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  else if(i == route->size()){
+  ~~^~~~~~~~~~~~~~~~
+  *** [.pioenvs\nucleo_f446re\src\Navigator.o] Error 1
+   [ERROR] Took 28.71 seconds 
+  
+  
+   [SUMMARY] 
+  Environment nucleo_f429zi	[SKIP]
+  Environment nucleo_f767zi	[SKIP]
+  Environment nucleo_f446re	[ERROR]
+   [ERROR] Took 28.71 seconds 
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.MakeFile.Targets(41,5): error MSB3073: The command "platformio -f -c visualstudio run -e nucleo_f446re -v --target upload --upload-port E:/" exited with code 1.

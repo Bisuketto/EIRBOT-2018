@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Toeast"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOADFS">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOADFS"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOAD">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOAD"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_CLEAN">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_CLEAN"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_REBUILD_PROJECT_INDEX">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_REBUILD_PROJECT_INDEX"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_TEST">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_TEST"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Toeast">
+				<Option output="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Toeast.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/."/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/cmsis"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/cmsis/TARGET_CORTEX_M"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/drivers"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/hal"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/hal/storage_abstraction"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/device"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI/device"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI/device/TOOLCHAIN_GCC_ARM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI/TARGET_NUCLEO_F429ZI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/platformio/variants/NUCLEO_F429ZI"/>
+					<Add directory="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets/TARGET_STM/TARGET_STM32F4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI/TARGET_NUCLEO_F429ZI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHost"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHost3GModule"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostHID"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostHub"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostMIDI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostMSD"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostSerial"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/api"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/core"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/core/ipv4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/core/ipv6"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/priv"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/prot"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif/ppp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif/ppp/polarssl"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/netif"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/netif/ppp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/netif/ppp/polarssl"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_STM/TARGET_STM32F4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_STM/TARGET_STM32F4/TARGET_NUCLEO_F429ZI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-sys"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-sys/arch"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/targets/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBAudio"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBDevice"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBHID"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBMIDI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBMSD"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBSerial"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/netsocket"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/netsocket/cellular"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/netsocket/cellular/generic_modem_driver"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/netsocket/cellular/utils"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/configuration-store"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc/design"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc/design/pics"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc/design/umlet"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc/project"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/flash-journal"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/flash-journal/flash-journal-strategy-sequential"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/storage-volume-manager"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/storage-volume-manager/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/storage-volume-manager/storage-volume-manager"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/coap-service"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/coap-service/coap-service"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/coap-service/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/coap-service/source/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/mbed-mesh-api"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/mbed-mesh-api/mbed-mesh-api"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/mbed-mesh-api/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/mbed-mesh-api/source/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/nanostack-interface"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/docs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/docs/img"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/doxygen"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/nanostack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/nanostack/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Bootstraps"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Bootstraps/Generic"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Fragmentation"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/IPHC_Decode"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/MAC"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Mesh"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/ND"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/NVM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Thread"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/BorderRouter"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Common_Protocols"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/configs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/configs/base"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Core"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Core/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/DHCPv6_Server"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/ipv6_stack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/libDHCPv6"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/libNET"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/libNET/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC/ethernet"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC/IEEE802_15_4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC/serial"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC/virtual_rf"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MLE"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MPL"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/NWK_INTERFACE"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/NWK_INTERFACE/Include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/RPL"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Security"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Security/Common"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Security/PANA"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Security/TLS"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/blacklist"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/CCM_lib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/CCM_lib/mbedOS"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/etx"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/fhss"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/fnv_hash"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/load_balance"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/port"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/port/compiler"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/port/cpu"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services/dns"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services/mdns"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services/poll"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services/serial"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/stack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mle_service"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/nd_proxy"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/Neighbor_cache"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/pan_blacklist"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/SHA256_Lib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/Trickle"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/utils"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/whiteboard"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/importer"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/inc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/platform/inc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/platform/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/targets/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/targets/TARGET_STM/TARGET_STM32F4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/CommonTables"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/ControllerFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/FastMathFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/FilteringFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/MatrixFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/SupportFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/TransformFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/dsp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/rpc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-client-randlib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-client-randlib/mbed-client-randlib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-client-randlib/mbed-client-randlib/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-client-randlib/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap/doxygen"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap/mbed-coap"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap/source/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-trace"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-trace/mbed-trace"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-trace/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-hal-mbed-cmsis-rtos"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-hal-mbed-cmsis-rtos/cs_nvm"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-hal-mbed-cmsis-rtos/nvm"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/mbed-client-libservice"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/mbed-client-libservice/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/IPv6_fcf_lib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libBits"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libip6string"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libList"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libTrace"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libTrace/scripts"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/nsdynmemLIB"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/nvmHelper"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/sal-stack-nanostack-eventloop"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/sal-stack-nanostack-eventloop/nanostack-event-loop"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/sal-stack-nanostack-eventloop/nanostack-event-loop/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/sal-stack-nanostack-eventloop/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/importer"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor/api"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor/api/inc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor-lib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor-lib/rtx"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/source/rtx"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/targets/TARGET_UVISOR_UNSUPPORTED"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/bd"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/fat"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/fat/ChaN"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/littlefs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/littlefs/littlefs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/ble"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/ble/generic"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/ble/pal"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/ble/services"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/source/generic"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/source/services"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/events"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/events/equeue"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/Include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Config"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_GCC"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_GCC/TARGET_RTOS_M4_M7"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/Source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/tool-unity"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 Toeast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Toeast/fast">
+				<Option output="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Toeast.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/."/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/cmsis"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/cmsis/TARGET_CORTEX_M"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/drivers"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/hal"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/hal/storage_abstraction"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/device"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI/device"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI/device/TOOLCHAIN_GCC_ARM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI/TARGET_NUCLEO_F429ZI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/platformio/variants/NUCLEO_F429ZI"/>
+					<Add directory="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets/TARGET_STM/TARGET_STM32F4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F429xI/TARGET_NUCLEO_F429ZI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHost"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHost3GModule"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostHID"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostHub"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostMIDI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostMSD"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostSerial"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/api"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/core"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/core/ipv4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/core/ipv6"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/priv"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/prot"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif/ppp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif/ppp/polarssl"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/netif"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/netif/ppp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip/src/netif/ppp/polarssl"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_STM/TARGET_STM32F4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_STM/TARGET_STM32F4/TARGET_NUCLEO_F429ZI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-sys"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_LWIP/lwip-interface/lwip-sys/arch"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/targets/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBAudio"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBDevice"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBHID"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBMIDI"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBMSD"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBSerial"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/netsocket"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/netsocket/cellular"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/netsocket/cellular/generic_modem_driver"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/netsocket/cellular/utils"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/configuration-store"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc/design"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc/design/pics"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc/design/umlet"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/doc/project"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/cfstore/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/flash-journal"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/flash-journal/flash-journal-strategy-sequential"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/storage-volume-manager"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/storage-volume-manager/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/storage/FEATURE_STORAGE/storage-volume-manager/storage-volume-manager"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/coap-service"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/coap-service/coap-service"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/coap-service/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/coap-service/source/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/mbed-mesh-api"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/mbed-mesh-api/mbed-mesh-api"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/mbed-mesh-api/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/mbed-mesh-api/source/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/nanostack-interface"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/docs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/docs/img"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/doxygen"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/nanostack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/nanostack/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Bootstraps"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Bootstraps/Generic"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Fragmentation"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/IPHC_Decode"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/MAC"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Mesh"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/ND"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/NVM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/6LoWPAN/Thread"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/BorderRouter"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Common_Protocols"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/configs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/configs/base"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Core"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Core/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/DHCPv6_Server"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/ipv6_stack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/libDHCPv6"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/libNET"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/libNET/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC/ethernet"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC/IEEE802_15_4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC/serial"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MAC/virtual_rf"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MLE"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/MPL"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/NWK_INTERFACE"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/NWK_INTERFACE/Include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/RPL"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Security"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Security/Common"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Security/PANA"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Security/TLS"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/blacklist"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/CCM_lib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/CCM_lib/mbedOS"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/etx"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/fhss"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/fnv_hash"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/load_balance"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/port"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/port/compiler"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/port/cpu"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services/dns"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services/mdns"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services/poll"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/services/serial"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mdns/fnet/fnet_stack/stack"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/mle_service"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/nd_proxy"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/Neighbor_cache"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/pan_blacklist"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/SHA256_Lib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/Trickle"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/utils"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/sal-stack-nanostack/source/Service_Libs/whiteboard"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/nanostack/FEATURE_NANOSTACK/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/importer"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/inc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/platform/inc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/platform/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/src"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/targets/TARGET_STM"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/mbedtls/targets/TARGET_STM/TARGET_STM32F4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/CommonTables"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/ControllerFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/FastMathFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/FilteringFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/MatrixFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/SupportFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp/TransformFunctions"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/dsp/dsp"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/unsupported/rpc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-client-randlib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-client-randlib/mbed-client-randlib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-client-randlib/mbed-client-randlib/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-client-randlib/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap/doxygen"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap/mbed-coap"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-coap/source/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-trace"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-trace/mbed-trace"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/mbed-trace/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-hal-mbed-cmsis-rtos"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-hal-mbed-cmsis-rtos/cs_nvm"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-hal-mbed-cmsis-rtos/nvm"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/mbed-client-libservice"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/mbed-client-libservice/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/IPv6_fcf_lib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libBits"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libip6string"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libList"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libTrace"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/libTrace/scripts"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/nsdynmemLIB"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/nanostack-libservice/source/nvmHelper"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/sal-stack-nanostack-eventloop"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/sal-stack-nanostack-eventloop/nanostack-event-loop"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/sal-stack-nanostack-eventloop/nanostack-event-loop/platform"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_COMMON_PAL/sal-stack-nanostack-eventloop/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/importer"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor/api"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor/api/inc"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor-lib"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/includes/uvisor-lib/rtx"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/source/rtx"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_UVISOR/targets/TARGET_UVISOR_UNSUPPORTED"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/bd"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/fat"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/fat/ChaN"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/littlefs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/filesystem/littlefs/littlefs"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/ble"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/ble/generic"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/ble/pal"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/ble/services"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/source/generic"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/source/services"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/features/FEATURE_BLE/targets"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/events"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/events/equeue"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx4"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/Include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Config"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_GCC"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_GCC/TARGET_RTOS_M4_M7"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/framework-mbed/rtos/TARGET_CORTEX/rtx5/Source"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+					<Add directory="C:/Users/Biscuit/.platformio/packages/tool-unity"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 Toeast/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_PROGRAM">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_PROGRAM"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPDATE_ALL">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPDATE_ALL"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/CONSTANTES.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Encoders.cpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Encoders.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Motors.cpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Motors.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Navigator.cpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Navigator.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/PINOUT.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/REGU_CST.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Stepper.cpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Stepper.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/TELEM_CODE.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Telemetry.cpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/Telemetry.hpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/crc32.cpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/crc32.h">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/src/main.cpp">
+			<Option target="Toeast"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Biscuit/Google Drive/ENSEIRB/EIRBOT/COUPE 2018/Software/Toeast/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

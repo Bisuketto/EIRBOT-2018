@@ -16,13 +16,13 @@
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -32,13 +32,13 @@ QT_BEGIN_NAMESPACE
 class Ui_GUIWindow
 {
 public:
-    QAction *actionBlup;
+    QAction *actionRefresh;
     QWidget *centralWidget;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout_2;
     QGraphicsView *mapView;
-    QListView *listView;
+    QTableWidget *tableWidget;
     QSpacerItem *horizontalSpacer;
     QVBoxLayout *verticalLayout;
     QPushButton *button_connect;
@@ -61,8 +61,8 @@ public:
         GUIWindow->setSizePolicy(sizePolicy);
         GUIWindow->setMinimumSize(QSize(981, 518));
         GUIWindow->setMaximumSize(QSize(981, 518));
-        actionBlup = new QAction(GUIWindow);
-        actionBlup->setObjectName(QStringLiteral("actionBlup"));
+        actionRefresh = new QAction(GUIWindow);
+        actionRefresh->setObjectName(QStringLiteral("actionRefresh"));
         centralWidget = new QWidget(GUIWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayoutWidget = new QWidget(centralWidget);
@@ -87,13 +87,16 @@ public:
         mapView->setSizePolicy(sizePolicy1);
         mapView->setMinimumSize(QSize(300, 300));
         mapView->setBaseSize(QSize(0, 0));
+        mapView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        mapView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        mapView->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
 
         verticalLayout_2->addWidget(mapView);
 
-        listView = new QListView(horizontalLayoutWidget);
-        listView->setObjectName(QStringLiteral("listView"));
+        tableWidget = new QTableWidget(horizontalLayoutWidget);
+        tableWidget->setObjectName(QStringLiteral("tableWidget"));
 
-        verticalLayout_2->addWidget(listView);
+        verticalLayout_2->addWidget(tableWidget);
 
 
         horizontalLayout->addLayout(verticalLayout_2);
@@ -146,6 +149,8 @@ public:
 
         menuBar->addAction(menuOptions->menuAction());
         menuOptions->addAction(menuPort_COM->menuAction());
+        menuPort_COM->addAction(actionRefresh);
+        menuPort_COM->addSeparator();
 
         retranslateUi(GUIWindow);
 
@@ -155,7 +160,7 @@ public:
     void retranslateUi(QMainWindow *GUIWindow)
     {
         GUIWindow->setWindowTitle(QApplication::translate("GUIWindow", "GUIBot", Q_NULLPTR));
-        actionBlup->setText(QApplication::translate("GUIWindow", "Blup", Q_NULLPTR));
+        actionRefresh->setText(QApplication::translate("GUIWindow", "Refresh", Q_NULLPTR));
         button_connect->setText(QApplication::translate("GUIWindow", "Connect", Q_NULLPTR));
         menuOptions->setTitle(QApplication::translate("GUIWindow", "Options", Q_NULLPTR));
         menuPort_COM->setTitle(QApplication::translate("GUIWindow", "Port COM", Q_NULLPTR));

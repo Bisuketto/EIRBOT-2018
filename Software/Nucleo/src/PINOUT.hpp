@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PINOUT_H
+#define PINOUT_H
 
 #include "mbed.h"
 
@@ -24,3 +25,15 @@
 #define PIN_PWMG PB_10
 #define PIN_SENSMD PF_13
 #define PIN_SENSMG PF_12
+
+//Launcher
+
+#define LAUNCHER_RX PD_6
+#define LAUNCHER_TX PD_5
+
+// VL530X I2C
+
+#define I2C_SDA PB_9
+#define I2C_SCL PB_8
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef STEPPER_H
+#define STEPPER_H
 
 #include "mbed.h"
 #include "CONSTANTES.hpp"
@@ -53,3 +54,5 @@ class Stepper {
 		bool stop;
 		Serial *debug_serial;
 };
+
+#endif

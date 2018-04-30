@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENCODERS_H
+#define ENCODERS_H
 
 #include "CONSTANTES.hpp"
 #include "PINOUT.hpp"
@@ -43,15 +44,19 @@ class Encoders
 		/*
 			Returns left encoder travel value
 		*/
-		float getDl();
+		int getDl();
 		/*
 			Returns left encoder travel value
 		*/
-		float getDr();
+		int getDr();
 		/*
 			Returns time since the last change
 		*/
 		float last_changed();
+		/*
+			Reset the change timer
+		*/
+		void reset_changed();
 		~Encoders();
 	private:
 		void routine_Encoders();
@@ -75,3 +80,5 @@ class Encoders
 		float theta; //Direction in rads
 		float dl;
 };
+
+#endif
