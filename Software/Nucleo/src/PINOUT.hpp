@@ -36,4 +36,23 @@
 #define I2C_SDA PB_9
 #define I2C_SCL PB_8
 
+// Navigator
+
+#define PIN_SIDE PE_15
+
+// Comm
+
+#define RF_TX PE_8
+#define RF_RX PE_9
+
+// 7segDisplay
+
+#define SSEG_PIN_A PE_11
+#define SSEG_PIN_B PE_11
+#define SSEG_PIN_C PE_11
+#define SSEG_PIN_D PE_11
+#define SSEG_PIN_EN1 PE_11
+#define SSEG_PIN_EN2 PE_11
+#define SSEG_PIN_EN3 PE_11
+
 #endif

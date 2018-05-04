@@ -153,7 +153,7 @@ void Motors::routine() {
 		float dist_from_start = (instEncoders->getDr() - dist_r_init + instEncoders->getDl() - dist_l_init)*PERIMETER / RESOLUTION / 2.;
 		epsilon_pos = -dist_from_start;
 		float ang_t = (theta_i + ang_init - theta_act)*180/PI;
-		epsilon_ang = (ang_t > 180 || ang_t < -180) ? 2 * 180 - ang_t : ang_t;
+		epsilon_ang = (ang_t >= 180 || ang_t < -180) ? 2 * 180 - ang_t : ang_t;
 	}
 	else if (NUL) {
 		float Dx_act = x_init - x_act;
@@ -504,6 +504,12 @@ void Motors::dead_zone() {
 		stop();
 		instNav->finished();
 	}
+	else if (instGP2->too_close()) {
+		if (debug)
+			serialOut->printf("Regulator process ended by GP2 detection\n");
+		stop();
+		instNav->finished();
+	}
 }
 
 void Motors::stop() {
@@ -606,4 +612,8 @@ void Motors::identifier_routine() {
 			serialOut->printf("%f\n", mes[i]);
 		}
 	}
+}
+
+void Motors::set_GP2_ptr(GP2* _instGP2) {
+	instGP2 = _instGP2;
 }

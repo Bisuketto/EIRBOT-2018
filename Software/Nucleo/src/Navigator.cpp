@@ -101,7 +101,12 @@ void Navigator::go_to_i() {
 		float Dx = (*route)[i/ 2][0] - instEncoders->getX();
 		float Dy = (*route)[i/2][1] - instEncoders->getY();
 		float Ddist = sqrt(Dx*Dx + Dy*Dy);
-		instMotors->rotate((2 * atan(Dy / (Dx + Ddist))));
+		if (Dy == 0) {
+			instMotors->rotate(PI);
+		}
+		else {
+			instMotors->rotate((2 * atan(Dy / (Dx + Ddist))));
+		}
 	}
 	else if ((i % 2 == 1) && (i < (route->size() * 2))) {
 		if(debug)

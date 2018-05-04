@@ -7,6 +7,8 @@
 #include "Telemetry.hpp"
 #include "Launcher.hpp"
 #include "rtos.h" //Maybe used in the future
+#include "Adafruit_VL53L0X_Nucleo.h"
+#include "SevSegDisplay.hpp"
 
 
 int main() {
@@ -15,11 +17,75 @@ int main() {
 	DigitalIn btn(USER_BUTTON);
 	Serial debug(USBTX, USBRX, 115200);
 
+
 	Telemetry instTelem(&debug);
 
 	if (debugging)
 		debug.printf("\n\nTesutou Puroguramu !\n");
 
+	if (debugging)
+		debug.printf("7Seg Display Test\n");
+	SevSegDisplay sseg(SSEG_PIN_A, SSEG_PIN_B, SSEG_PIN_C, SSEG_PIN_D, SSEG_PIN_EN1, SSEG_PIN_EN2, SSEG_PIN_EN3);
+	sseg.display(586);
+	//wait(5);
+	//sseg.stop();
+	if (debugging)
+		debug.printf("7Seg Display : [Ok]\n");
+
+	if (debugging)
+		debug.printf("VL53L0X Test\n");
+	//I2C* i2ctest = new I2C(I2C_SDA, I2C_SCL);
+	/*i2ctest->start();
+	i2ctest->write(0x29);
+	i2ctest->write(0xC0);
+	i2ctest->stop();*/
+	/*i2ctest->start();
+	i2ctest->write(0x29 + 1);
+	char res = i2ctest->read(1);
+	i2ctest->stop();*/
+	/*char index[1];
+	index[0] = 0x61;
+	char res[2];
+	i2ctest->write(0x29 << 1, index, 1);
+	i2ctest->read(0x29 << 1, res, 2);
+
+	debug.printf("Value of 0x61 : %X, %X\n", res[0], res[1]);
+
+	index[0] = 0xC1;
+	i2ctest->write(0x29 << 1, index, 1);
+	i2ctest->read(0x29 << 1, res, 1);
+
+	debug.printf("Value of 0xC1 : %X\n", res[0]);
+
+	index[0] = 0x51;
+	i2ctest->write(0x29 << 1, index, 1);
+	i2ctest->read(0x29 << 1, res, 2);
+
+	debug.printf("Value of 0x51 : %X, %X\n", res[0], res[1]);
+
+	while (1);
+	/*VL53L0X_i2c_init(&debug);
+	char data[4];
+	VL53L0X_read_byte(0x29, 0xC1, (uint8_t*) data);
+	debug.printf("Value of 0xC1 %X\n", data[0]);
+	while (1);*/
+	VL53L0X_RangingMeasurementData_t measure;
+	Adafruit_VL53L0X lox = Adafruit_VL53L0X();
+	//bool initok = lox.begin(VL53L0X_I2C_ADDR);
+	//debug.printf("Ok : %s\n", (initok == true) ? "True" : "False");
+	//debug.printf("AdrrChange : %s\n", (lox.setAddress(0x42) == true) ? "True" : "False");
+	//while (1);
+	/*if (initok) {
+		for (int i = 0; i < 5; i++) {
+			lox.rangingTest(&measure, false);
+			if (debugging)
+				debug.printf("MESURE : %d\n", measure.RangeMilliMeter);
+			wait(2);
+		}
+	}*/
+	if (debugging)
+		debug.printf("VL53L0X [Ok]\n");
+	
 	DigitalOut green(LED1);
 	if (debugging)
 		debug.printf("Launcher initialization\n");
@@ -97,6 +163,9 @@ int main() {
 	}
 
 	nav->navigate(&route1, -PI / 2);
+	//lox.rangingTest(&measure, false);
+	//if (debugging)
+	//	debug.printf("MESURE : %d\n", measure.RangeMilliMeter);
 	nav->navigate(&route2, PI/2);
 	nav->navigate(&route3, PI);
 	//nav->navigate(&route4, 0);

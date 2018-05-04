@@ -10,7 +10,7 @@
 
 //Motors Global Parameters
 #define PERIODE_PWM 25 //µs
-#define ACCELERATION_POS 750.
+#define ACCELERATION_POS 250.//750.
 #define VITESSEMAX_POS 500.
 #define ACCELERATION_ANG PI/2
 #define VITESSEMAX_ANG PI/2
@@ -27,3 +27,11 @@
 #define RESOLUTION 4096 // Mecanical parameters
 #define PERIMETER 90.14 //94.24
 #define RADIUS_ENC 181.25//176.5 //Disance Encodeur-Centre en mm
+
+//7segDisplay Parameters
+
+#define DISP_PERIODE 0.02
+
+//GP2 Parameters
+
+#define THRESHOLD_GP2 0.3

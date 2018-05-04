@@ -8,6 +8,7 @@
 #include "Encoders.hpp"
 #include "Navigator.hpp"
 #include "Telemetry.hpp"
+#include "GP2.hpp"
 #include <math.h>
 #include <vector>
 
@@ -47,6 +48,10 @@ class Motors {
 			Set pointer to Navigator instance
 		*/
 		void set_Nav_ptr(Navigator* _instNav);
+		/*
+			Set pointer to GP2 instance
+		*/
+		void set_GP2_ptr(GP2* _instGP2);
 		/*
 			Stops immediately current job
 		*/
@@ -108,6 +113,7 @@ class Motors {
 		Ticker* schedule_infos;
 		Timer* t_cmd;
 		Encoders* instEncoders;
+		GP2* instGP2;
 		PwmOut* right_motor;
 		PwmOut* left_motor;		
 		DigitalOut* dir_right;

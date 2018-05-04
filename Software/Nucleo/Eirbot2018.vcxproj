@@ -115,7 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\crc32.cpp" />
+    <ClCompile Include="src\GP2.cpp" />
     <ClCompile Include="src\Launcher.cpp" />
+    <ClCompile Include="src\SevSegDisplay.cpp" />
     <ClCompile Include="src\Telemetry.cpp" />
     <ClCompile Include="src\Encoders.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -125,7 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\crc32.h" />
+    <ClInclude Include="src\GP2.hpp" />
     <ClInclude Include="src\Launcher.hpp" />
+    <ClInclude Include="src\SevSegDisplay.hpp" />
     <ClInclude Include="src\Telemetry.hpp" />
     <ClInclude Include="src\CONSTANTES.hpp" />
     <ClInclude Include="src\Encoders.hpp" />
