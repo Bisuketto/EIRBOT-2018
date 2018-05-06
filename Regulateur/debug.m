@@ -1,0 +1,20 @@
+close all;
+
+figure();
+plot(time, consigne);
+title('consigne');
+figure();
+plot(time, erreur);
+title('erreur');
+figure();
+plot(time, sortie);
+title('sortie');
+figure();
+hold on;
+title('entrees');
+plot(time, entre_pos);
+plot(time, entre_ang);
+figure();
+plot(time, consigne);
+hold on;
+plot(time, sortie);

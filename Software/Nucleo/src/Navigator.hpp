@@ -41,6 +41,7 @@ class Navigator
 		void finished();
 
 		void test(float _pwm_low, float _pwm_high, int _t1, float _period);
+		void motorDebug();
 		~Navigator();
 	private:
 		bool debug;

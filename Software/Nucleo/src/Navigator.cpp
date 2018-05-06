@@ -101,7 +101,7 @@ void Navigator::go_to_i() {
 		float Dx = (*route)[i/ 2][0] - instEncoders->getX();
 		float Dy = (*route)[i/2][1] - instEncoders->getY();
 		float Ddist = sqrt(Dx*Dx + Dy*Dy);
-		if (Dy == 0) {
+		if (Dy == 0  && Dx == -Ddist) {
 			instMotors->rotate(PI);
 		}
 		else {
@@ -138,4 +138,8 @@ void Navigator::test(float _pwm_low, float _pwm_high, int _t1, float _period) {
 	instMotors->identify_rotate(_pwm_low, _pwm_high, _t1, _period);
 	if (debug)
 		serialOut->printf("Measurement ended.\n");
+}
+
+void Navigator::motorDebug() {
+	instMotors->go_to_Nul(500, 500, 0);
 }

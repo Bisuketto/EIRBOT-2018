@@ -7,7 +7,7 @@
 #include "Telemetry.hpp"
 #include "Launcher.hpp"
 #include "rtos.h" //Maybe used in the future
-#include "Adafruit_VL53L0X_Nucleo.h"
+//#include "Adafruit_VL53L0X_Nucleo.h"
 #include "SevSegDisplay.hpp"
 
 
@@ -69,8 +69,8 @@ int main() {
 	VL53L0X_read_byte(0x29, 0xC1, (uint8_t*) data);
 	debug.printf("Value of 0xC1 %X\n", data[0]);
 	while (1);*/
-	VL53L0X_RangingMeasurementData_t measure;
-	Adafruit_VL53L0X lox = Adafruit_VL53L0X();
+	//VL53L0X_RangingMeasurementData_t measure;
+	//Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 	//bool initok = lox.begin(VL53L0X_I2C_ADDR);
 	//debug.printf("Ok : %s\n", (initok == true) ? "True" : "False");
 	//debug.printf("AdrrChange : %s\n", (lox.setAddress(0x42) == true) ? "True" : "False");
@@ -162,12 +162,14 @@ int main() {
 		}
 	}
 
-	nav->navigate(&route1, -PI / 2);
+
+	nav->motorDebug();
+	//nav->navigate(&route1, -PI / 2);
 	//lox.rangingTest(&measure, false);
 	//if (debugging)
 	//	debug.printf("MESURE : %d\n", measure.RangeMilliMeter);
-	nav->navigate(&route2, PI/2);
-	nav->navigate(&route3, PI);
+	//nav->navigate(&route2, PI/2);
+	//nav->navigate(&route3, PI);
 	//nav->navigate(&route4, 0);
 	//nav->test(0, 0.3, 1., 0.005);
 

@@ -10,14 +10,14 @@
 
 //Motors Global Parameters
 #define PERIODE_PWM 25 //µs
-#define ACCELERATION_POS 250.//750.
-#define VITESSEMAX_POS 500.
+#define ACCELERATION_POS 20.//750.
+#define VITESSEMAX_POS 100.
 #define ACCELERATION_ANG PI/2
 #define VITESSEMAX_ANG PI/2
 #define V_ALIM_POWER 18
 #define TOLERANCE_POS 20 //mm
 #define TOLERANCE_ANG 1
-#define TIMEOUT 1000 //ms
+#define TIMEOUT 10000 //ms
 #define DIR_LENGTH 3
 #define DIM_PT 2
 #define N_PTS 500

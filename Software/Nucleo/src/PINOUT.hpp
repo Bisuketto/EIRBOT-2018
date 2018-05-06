@@ -47,12 +47,12 @@
 
 // 7segDisplay
 
-#define SSEG_PIN_A PE_11
-#define SSEG_PIN_B PE_11
-#define SSEG_PIN_C PE_11
-#define SSEG_PIN_D PE_11
-#define SSEG_PIN_EN1 PE_11
-#define SSEG_PIN_EN2 PE_11
-#define SSEG_PIN_EN3 PE_11
+#define SSEG_PIN_A PC_8
+#define SSEG_PIN_B PC_9
+#define SSEG_PIN_C PC_10
+#define SSEG_PIN_D PC_11
+#define SSEG_PIN_EN1 PC_12
+#define SSEG_PIN_EN2 PD_2
+#define SSEG_PIN_EN3 PG_2
 
 #endif

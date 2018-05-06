@@ -65,6 +65,14 @@ Motors::Motors(PinName _pwmL, PinName _pwmR, PinName _dirL, PinName _dirR, Seria
 	left_motor->period_us(25);
 	dir_left = new DigitalOut(_dirL);
 	dir_right = new DigitalOut(_dirR);
+	
+	//dir_right->write(1);
+	//right_motor->write(0.3);
+	dir_left->write(0);
+	left_motor->write(0.3);
+	wait(10);
+	//right_motor->write(0);
+	left_motor->write(0);
 
 	/*serialOut->printf("\tMotor test\n");
 	dir_right->write(1);
@@ -152,15 +160,15 @@ void Motors::routine() {
 		//float Dy = y_init - y_act;
 		float dist_from_start = (instEncoders->getDr() - dist_r_init + instEncoders->getDl() - dist_l_init)*PERIMETER / RESOLUTION / 2.;
 		epsilon_pos = -dist_from_start;
-		float ang_t = (theta_i + ang_init - theta_act)*180/PI;
-		epsilon_ang = (ang_t >= 180 || ang_t < -180) ? 2 * 180 - ang_t : ang_t;
+		float ang_t = (theta_i + ang_init - theta_act);// *180 / PI;
+		epsilon_ang = (ang_t >= PI || ang_t < -PI) ? 2 * PI - ang_t : ang_t;
 	}
 	else if (NUL) {
 		float Dx_act = x_init - x_act;
 		float Dy_act = y_init - y_act;
 		float Ddist_act = sqrt(Dx_act*Dx_act + Dy_act*Dy_act);
 		epsilon_pos = pos_reference_calculation_RSQR()  - Ddist_act;
-		epsilon_ang = ang_reference - instEncoders->getTheta();
+		epsilon_ang = 0;//ang_reference - instEncoders->getTheta();
 	}
 	else {
 		epsilon_pos = 0;
@@ -277,7 +285,7 @@ void Motors::go_to_Nul(float _dist, float _x, float _y) {
 	if (debug)
 		serialOut->printf("Starting info routine\n");
 	if (debug)
-		schedule_infos->attach(callback(this, &Motors::send_i), 2.);
+		schedule_infos->attach(callback(this, &Motors::send_i), 0.01);
 	serialOut->attach(callback(this, &Motors::comStop));
 	serialOut->printf("RSQR : %d ROT : %d NUL : %d\n", RSQR, ROT, NUL);
 	status = true;
@@ -465,10 +473,10 @@ void Motors::to_H_bridgeable(float* _right_cmd, float* _left_cmd) {
 }
 
 void Motors::saturation(float* _lin_spd, float* _ang_spd, float _sat_pos, float _sat_ang) {
-	*_lin_spd = (*_lin_spd > V_ALIM_POWER/ _sat_pos) ? V_ALIM_POWER / _sat_pos : *_lin_spd;
-	*_lin_spd = (*_lin_spd < -V_ALIM_POWER / _sat_pos) ? -V_ALIM_POWER / _sat_pos : *_lin_spd;
-	*_ang_spd = (*_ang_spd > V_ALIM_POWER / _sat_ang) ? V_ALIM_POWER / _sat_ang : *_ang_spd;
-	*_ang_spd = (*_ang_spd < -V_ALIM_POWER / _sat_ang) ? V_ALIM_POWER / _sat_ang : *_ang_spd;
+	*_lin_spd = (*_lin_spd > (V_ALIM_POWER * _sat_pos)) ? (V_ALIM_POWER * _sat_pos) : *_lin_spd;
+	*_lin_spd = (*_lin_spd < (-V_ALIM_POWER * _sat_pos)) ? (-V_ALIM_POWER * _sat_pos) : *_lin_spd;
+	*_ang_spd = (*_ang_spd > (V_ALIM_POWER * _sat_ang)) ? (V_ALIM_POWER * _sat_ang) : *_ang_spd;
+	*_ang_spd = (*_ang_spd < (-V_ALIM_POWER * _sat_ang)) ? (V_ALIM_POWER * _sat_ang) : *_ang_spd;
 }
 
 void Motors::set_Enc_ptr(Encoders* _enc) {
@@ -504,7 +512,7 @@ void Motors::dead_zone() {
 		stop();
 		instNav->finished();
 	}
-	else if (instGP2->too_close()) {
+	else if (false && instGP2->too_close()) {
 		if (debug)
 			serialOut->printf("Regulator process ended by GP2 detection\n");
 		stop();
@@ -526,7 +534,7 @@ void Motors::stop() {
 }
 
 void Motors::send_i() {
-	if (debug) {
+	if (0 && debug) {
 		serialOut->printf("\n(xi:%f ; yi:%f)\n", xi, yi);
 		//serialOut->printf("LastChange : %f\n", instEncoders->last_changed());
 		serialOut->printf("(x:%f ; y:%f) ang:%f\n", instEncoders->getX(), instEncoders->getY(), instEncoders->getTheta());
@@ -539,6 +547,16 @@ void Motors::send_i() {
 		serialOut->printf("%s le demi plan\n", (location() == 1) ? "Dans" : "Dehors");
 		serialOut->printf("Director N: %f,%f N-1: %f,%f\n", director[0][0], director[0][1], director[1][0], director[1][1]);
 		//serialOut->printf("P_tmp : %f,%f\n", p_tmp[0], p_tmp[1]);
+	}
+	else {
+		float x_act = instEncoders->getX();
+		float y_act = instEncoders->getY();
+		float Dx_act = x_init - x_act;
+		float Dy_act = y_init - y_act;
+		float Ddist_act = sqrt(Dx_act*Dx_act + Dy_act*Dy_act);
+
+
+		serialOut->printf("%f,%f,%f,%f,%f,%f\n", t_cmd->read_us()*0.001, pos_reference_calculation_RSQR(), pos_err[0], Ddist_act, pos_cmd[0], ang_cmd[0]);
 	}
 	if (telemetry_en && instEncoders != NULL) {
 		instTelem->send_COORD(instEncoders->getX(), instEncoders->getY());
@@ -571,6 +589,7 @@ int Motors::location() {
 	*/
 	float x_act = instEncoders->getX();
 	float y_act = instEncoders->getY();
+
 	if (sqrt((x_act - x_reference)*(x_act - x_reference) + (y_act - y_reference)*(y_act - y_reference)) > (pos_reference - pos_reference_calculation_RSQR())) {
 		return -1;
 	}
