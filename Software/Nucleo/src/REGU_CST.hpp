@@ -15,8 +15,8 @@
 
 #if defined(MAIN_BOT)
 	#pragma message("Using main bot regulator coefficients")
-	/*
-	#define TAILLE_TABLEAUX_POS 5
+	
+	/*#define TAILLE_TABLEAUX_POS 5
 	#define TAILLE_TABLEAUX_ANG 5
 	#define TECH 0.005 //0.00020358
 	#define XCOEFFS_POS {0.000000, 0.07259, -0.06858, -0.07254, 0.06863}
@@ -29,8 +29,8 @@
 #define TECH 0.005000
 #define XCOEFFS_POS {0.0477, 0.052,-0.03609,-0.02833, 0.01205}
 #define YCOEFFS_POS {1.000000, 1.584 ,0.1548, -0.5678, -0.1361}
-#define XCOEFFS_ANG {3.398525,-3.396840e+00f,-3.398525e+00f,3.396841e+00f}
-#define YCOEFFS_ANG {1.000000,-2.963887e+00f,2.928024e+00f,-9.641367e-01f}
+#define XCOEFFS_ANG {0.02768, 0.03114,-0.01866,-0.01486, 0.007262}
+#define YCOEFFS_ANG {1.000000, 1.252,-0.6365,-1.172, -0.2807}
 
 #elif defined(ANNEX_BOT)
 

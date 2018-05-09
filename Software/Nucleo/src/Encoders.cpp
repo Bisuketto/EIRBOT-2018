@@ -10,6 +10,8 @@ Encoders::Encoders() {
 	scheduler_Encoders->attach(callback(this, &Encoders::routine_Encoders), PERIODE_ENCODER);
 	t_changed = new Timer();
 	t_changed->start();
+	dist_l = 0;
+	dist_r = 0;
 	dtot_g = 0;
 	dtot_d = 0;
 	x = 0;
@@ -27,6 +29,8 @@ Encoders::Encoders(float x0, float y0, float theta_i) {
 	scheduler_Encoders->attach(callback(this, &Encoders::routine_Encoders), PERIODE_ENCODER);
 	t_changed = new Timer();
 	t_changed->start();
+	dist_l = 0;
+	dist_r = 0;
 	dtot_g = 0;
 	dtot_d = 0;
 	x = x0;
@@ -46,15 +50,17 @@ Encoders::Encoders(Serial *pcOut) {
 	scheduler_Encoders->attach(callback(this, &Encoders::routine_Encoders), PERIODE_ENCODER);
 	t_changed = new Timer();
 	t_changed->start();
+	dist_l = 0;
+	dist_r = 0;
 	dtot_g = 0;
 	dtot_d = 0;
 	x = 0;
 	y = 0;
 	theta0 = 0;
-	Timer twait;
+	/*Timer twait;
 	twait.start();
 	while (twait.read_ms() < 3000);
-	pc->printf("\tENCL : %d ENCR : %d\n", impEncG, impEncD);
+	pc->printf("\tENCL : %d ENCR : %d\n", impEncG, impEncD);*/
 	impEncD = 0;
 	impEncG = 0;
 	pc->printf("\tEncoders : [Ok]\n");
@@ -89,6 +95,8 @@ void Encoders::routine_Encoders()
 
 	dld = d; // in imp.s-1
 	dlg = g;
+	dist_l += g;
+	dist_r += d;
 	dtot_d += d;
 	dtot_g += g;
 	odometrie();
@@ -120,11 +128,16 @@ float Encoders::getTheta() {
 }
 
 int Encoders::getDr() {
-	return dtot_d;
+	return dist_r;
 }
 
 int Encoders::getDl() {
-	return dtot_g;
+	return dist_l;
+}
+
+void Encoders::restart_dists() {
+	dist_r = 0;
+	dist_l = 0;
 }
 
 float Encoders::last_changed() {

@@ -66,13 +66,13 @@ Motors::Motors(PinName _pwmL, PinName _pwmR, PinName _dirL, PinName _dirR, Seria
 	dir_left = new DigitalOut(_dirL);
 	dir_right = new DigitalOut(_dirR);
 	
-	//dir_right->write(1);
+	//dir_right->write(0);
 	//right_motor->write(0.3);
-	dir_left->write(0);
-	left_motor->write(0.3);
-	wait(10);
+	//dir_left->write(1);
+	//left_motor->write(0.3);
+	//wait(2);
 	//right_motor->write(0);
-	left_motor->write(0);
+	//left_motor->write(0);
 
 	/*serialOut->printf("\tMotor test\n");
 	dir_right->write(1);
@@ -160,15 +160,25 @@ void Motors::routine() {
 		//float Dy = y_init - y_act;
 		float dist_from_start = (instEncoders->getDr() - dist_r_init + instEncoders->getDl() - dist_l_init)*PERIMETER / RESOLUTION / 2.;
 		epsilon_pos = -dist_from_start;
-		float ang_t = (theta_i + ang_init - theta_act);// *180 / PI;
-		epsilon_ang = (ang_t >= PI || ang_t < -PI) ? 2 * PI - ang_t : ang_t;
+		float ang_t = (theta_i + ang_init - theta_act) *180 / PI;
+		epsilon_ang = ang_t;// (ang_t >= PI || ang_t < -PI) ? 2 * PI - ang_t : ang_t;
+
+		if (epsilon_ang > 180)
+			epsilon_ang = -180 + fmod(epsilon_ang, 180.);
+		else if (epsilon_ang < -180)
+			epsilon_ang = 180 + fmod(epsilon_ang, 180.);
 	}
 	else if (NUL) {
-		float Dx_act = x_init - x_act;
+		/*float Dx_act = x_init - x_act;
 		float Dy_act = y_init - y_act;
-		float Ddist_act = sqrt(Dx_act*Dx_act + Dy_act*Dy_act);
-		epsilon_pos = pos_reference_calculation_RSQR()  - Ddist_act;
-		epsilon_ang = 0;//ang_reference - instEncoders->getTheta();
+		float Ddist_act = sqrt(Dx_act*Dx_act + Dy_act*Dy_act);*/
+		epsilon_pos = pos_reference_calculation_RSQR()  - ((instEncoders->getDr() + instEncoders->getDl())*PERIMETER/RESOLUTION/2.);
+		epsilon_ang = (ang_reference - instEncoders->getTheta())*180/PI;
+
+		if (epsilon_ang > 180)
+			epsilon_ang = -180 + fmod(epsilon_ang, 180.);
+		else if (epsilon_ang < -180)
+			epsilon_ang = 180 + fmod(epsilon_ang, 180.);
 	}
 	else {
 		epsilon_pos = 0;
@@ -198,8 +208,8 @@ void Motors::routine() {
 
 	to_H_bridgeable(&right_cmd, &left_cmd);
 
-	right_motor->write(right_cmd);
-	left_motor->write(left_cmd);
+	right_motor->write(right_cmd+0.03f);
+	left_motor->write(left_cmd+0.03f);
 
 	dead_zone();
 }
@@ -214,6 +224,7 @@ void Motors::go_to_RSQR(float _x, float _y) {
 
 	schedule_routine->detach();
 	reset_data();
+	//instEncoders->restart_dists();
 
 	x_reference = _x;
 	y_reference = _y;
@@ -285,7 +296,7 @@ void Motors::go_to_Nul(float _dist, float _x, float _y) {
 	if (debug)
 		serialOut->printf("Starting info routine\n");
 	if (debug)
-		schedule_infos->attach(callback(this, &Motors::send_i), 0.01);
+		schedule_infos->attach(callback(this, &Motors::send_i), 0.5);
 	serialOut->attach(callback(this, &Motors::comStop));
 	serialOut->printf("RSQR : %d ROT : %d NUL : %d\n", RSQR, ROT, NUL);
 	status = true;
@@ -331,6 +342,7 @@ void Motors::reset_data() {
 	tab_init(ang_err, TAILLE_TABLEAUX_ANG);
 	tab_init(director, DIR_LENGTH);
 	instEncoders->reset_changed();
+	instEncoders->restart_dists();
 }
 
 float Motors::pos_reference_calculation_RSQR() {
@@ -494,15 +506,25 @@ void Motors::hard_stop() {
 }
 
 void Motors::dead_zone() {
-	if (instEncoders->last_changed() > TIMEOUT) {
+	if (instNav->free_to_move() == false) {
+		if (debug)
+			serialOut->printf("Regulator process ended by game over\n");
+		stop();
+	}
+	else if (instEncoders->last_changed() > TIMEOUT) {
 		if (debug)
 			serialOut->printf("Regulator process ended by Timeout\n");
 		stop();
-		instNav->finished();
 	}
-	else if ((sqrt((x_reference - instEncoders->getX())*(x_reference - instEncoders->getX()) + (y_reference - instEncoders->getY())*(y_reference - instEncoders->getY())) < TOLERANCE_POS) && (RSQR || NUL)) {
+	else if ((sqrt((x_reference - instEncoders->getX())*(x_reference - instEncoders->getX()) + (y_reference - instEncoders->getY())*(y_reference - instEncoders->getY())) < TOLERANCE_POS) && (RSQR)) {
 		if (debug)
 			serialOut->printf("Regulator process ended by Goal Hit\n");
+		stop();
+		instNav->finished();
+	}
+	else if ((NUL) && (pos_reference - ((instEncoders->getDr() + instEncoders->getDl())*PERIMETER / RESOLUTION / 2.) < TOLERANCE_POS)) {
+		if (debug)
+			serialOut->printf("Distance atteinte\n");
 		stop();
 		instNav->finished();
 	}
@@ -512,11 +534,11 @@ void Motors::dead_zone() {
 		stop();
 		instNav->finished();
 	}
-	else if (false && instGP2->too_close()) {
+	else if (instGP2->too_close()) {
 		if (debug)
 			serialOut->printf("Regulator process ended by GP2 detection\n");
 		stop();
-		instNav->finished();
+		instNav->aborted();
 	}
 }
 
@@ -534,18 +556,18 @@ void Motors::stop() {
 }
 
 void Motors::send_i() {
-	if (0 && debug) {
-		serialOut->printf("\n(xi:%f ; yi:%f)\n", xi, yi);
+	if (debug) {
+		//serialOut->printf("\n(xi:%f ; yi:%f)\n", xi, yi);
 		//serialOut->printf("LastChange : %f\n", instEncoders->last_changed());
-		serialOut->printf("(x:%f ; y:%f) ang:%f\n", instEncoders->getX(), instEncoders->getY(), instEncoders->getTheta());
+		serialOut->printf("\n(x:%f ; y:%f) ang:%f\n", instEncoders->getX(), instEncoders->getY(), instEncoders->getTheta());
 		//serialOut->printf("Pos reference %f\n", pos_reference);
 		//float t = t_cmd->read_us();
 		//serialOut->printf("Reference_calc %f at t=%f\n", pos_reference_calculation_RSQR(), t*0.000001);
 		serialOut->printf("PWMD:%c%f PWMG:%c%f\n", (dr == 0) ? '-' : ' ', pwr, (dl == 0) ? '-' : ' ', pwl);
 		serialOut->printf("Pos err :%f Ang err : %f\n", pos_err[0], ang_err[0]);
-		serialOut->printf("%fx+%fy+%f=0\n", (director[0][0] - director[2][0]), (director[0][1] - director[2][1]), -(director[0][0] - director[2][0])*director[0][0] - (director[0][1] - director[2][1])*director[0][1]);
-		serialOut->printf("%s le demi plan\n", (location() == 1) ? "Dans" : "Dehors");
-		serialOut->printf("Director N: %f,%f N-1: %f,%f\n", director[0][0], director[0][1], director[1][0], director[1][1]);
+		//serialOut->printf("%fx+%fy+%f=0\n", (director[0][0] - director[2][0]), (director[0][1] - director[2][1]), -(director[0][0] - director[2][0])*director[0][0] - (director[0][1] - director[2][1])*director[0][1]);
+		//serialOut->printf("%s le demi plan\n", (location() == 1) ? "Dans" : "Dehors");
+		//serialOut->printf("Director N: %f,%f N-1: %f,%f\n", director[0][0], director[0][1], director[1][0], director[1][1]);
 		//serialOut->printf("P_tmp : %f,%f\n", p_tmp[0], p_tmp[1]);
 	}
 	else {

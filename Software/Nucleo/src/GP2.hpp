@@ -9,7 +9,9 @@ class GP2 {
 		GP2(PinName _A, PinName _B, PinName _C, PinName _D);
 		~GP2();
 		bool too_close();
+		void set_enabled(bool _enable);
 	private:
+		bool enabled;
 		AnalogIn* a;
 		AnalogIn* b;
 		AnalogIn* c;

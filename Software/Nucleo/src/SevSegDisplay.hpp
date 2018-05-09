@@ -19,7 +19,7 @@ private:
 
 	disp_status current_status;
 	Ticker* disp_scheduler;
-	DigitalOut* bits[4];
+	DigitalInOut* bits[4];
 	DigitalOut* displays[3];
 	char digit1;
 	char digit2;

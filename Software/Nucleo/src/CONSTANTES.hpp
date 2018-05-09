@@ -10,14 +10,14 @@
 
 //Motors Global Parameters
 #define PERIODE_PWM 25 //µs
-#define ACCELERATION_POS 20.//750.
-#define VITESSEMAX_POS 100.
+#define ACCELERATION_POS 200.//750.
+#define VITESSEMAX_POS 1000.
 #define ACCELERATION_ANG PI/2
 #define VITESSEMAX_ANG PI/2
 #define V_ALIM_POWER 18
-#define TOLERANCE_POS 20 //mm
+#define TOLERANCE_POS 50 //mm
 #define TOLERANCE_ANG 1
-#define TIMEOUT 10000 //ms
+#define TIMEOUT 9000 //ms
 #define DIR_LENGTH 3
 #define DIM_PT 2
 #define N_PTS 500
@@ -30,8 +30,14 @@
 
 //7segDisplay Parameters
 
-#define DISP_PERIODE 0.02
+#define DISP_PERIODE 0.005
 
 //GP2 Parameters
 
-#define THRESHOLD_GP2 0.3
+#define THRESHOLD_GP2 0.45
+#define THRESHOLD_GP2_SIDE 0.70
+
+//Global Parameters
+
+#define GAME_TIME 100 //secs
+#define GAME_MODE false

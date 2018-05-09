@@ -46,9 +46,13 @@ class Encoders
 		*/
 		int getDl();
 		/*
-			Returns left encoder travel value
+			Returns right encoder travel value
 		*/
 		int getDr();
+		/*
+			Resets left and right encoder travel value to start a new dist move
+		*/
+		void restart_dists();
 		/*
 			Returns time since the last change
 		*/
@@ -75,6 +79,8 @@ class Encoders
 		int dtot_g;
 		float dlg;
 		float dld;
+		float dist_r;
+		float dist_l;
 		float x;
 		float y;
 		float theta; //Direction in rads

@@ -39,6 +39,8 @@
 // Navigator
 
 #define PIN_SIDE PE_15
+#define LED_GREEN PB_1
+#define LED_RED PC_2
 
 // Comm
 
@@ -54,5 +56,17 @@
 #define SSEG_PIN_EN1 PC_12
 #define SSEG_PIN_EN2 PD_2
 #define SSEG_PIN_EN3 PG_2
+
+// GP2
+
+#define PIN_GP2_FL PA_3
+#define PIN_GP2_FR PC_0
+#define PIN_GP2_SL PC_3
+#define PIN_GP2_SR PF_3
+
+// Others
+
+#define STARTING_CORD PE_0
+
 
 #endif

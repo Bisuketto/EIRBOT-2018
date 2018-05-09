@@ -9,24 +9,42 @@
 #include "rtos.h" //Maybe used in the future
 //#include "Adafruit_VL53L0X_Nucleo.h"
 #include "SevSegDisplay.hpp"
+#include "GP2.hpp"
 
 
 int main() {
 	bool debugging = true;
 
 	DigitalIn btn(USER_BUTTON);
+	DigitalIn tirette(STARTING_CORD);
 	Serial debug(USBTX, USBRX, 115200);
 
+	/*while (1) {
+		debug.printf("Tirette : %s\n", (tirette.read() == true) ? "Mise" : "Retiree");
+		wait(0.25);
+	}*/
 
 	Telemetry instTelem(&debug);
 
 	if (debugging)
 		debug.printf("\n\nTesutou Puroguramu !\n");
 
+	/*GP2* instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
+	bool tooclose;
+	while (1) {
+		tooclose = instGp2->too_close();
+		debug.printf("Too close : %s\n", (tooclose) ? "yes" : "no");
+		wait(0.25);
+	}*/
+
 	if (debugging)
 		debug.printf("7Seg Display Test\n");
 	SevSegDisplay sseg(SSEG_PIN_A, SSEG_PIN_B, SSEG_PIN_C, SSEG_PIN_D, SSEG_PIN_EN1, SSEG_PIN_EN2, SSEG_PIN_EN3);
-	sseg.display(586);
+	/*for (int i = 0; i <= 999; i++) {
+		sseg.display(i);
+		wait(0.5);
+	}*/
+	sseg.display(777);
 	//wait(5);
 	//sseg.stop();
 	if (debugging)
@@ -89,16 +107,7 @@ int main() {
 	DigitalOut green(LED1);
 	if (debugging)
 		debug.printf("Launcher initialization\n");
-	Launcher launcherTest(LAUNCHER_RX, LAUNCHER_TX);
-	if (debugging) {
-		debug.printf("Launcher : [Ok]\n");
-		debug.printf("Enabling launcher for 10s\n");
-	}
-	launcherTest.on();
-	wait(1);
-	if (debugging)
-		debug.printf("Disabling launcher\n");
-	launcherTest.off();
+
 	green.write(1);
 
 	if (debugging) {
@@ -112,18 +121,49 @@ int main() {
 	DigitalOut blue(LED2);
 	blue.write(1);
 
+	if (debugging)
+		debug.printf("Waiting for start\n\n");
+
+	while (tirette.read() == false);
+
+	char buff[256];
+	while (btn.read() == 0 && (tirette.read() == true)) {
+		if (debugging) {
+			if (debug.readable()) {
+				debug.gets(buff, 256);
+				debug.printf("%s\n", buff);
+				if (strcmp(buff, "Start\n")) {
+					debug.printf("Go !\n");
+					break;
+				}
+			}
+		}
+	}
+
 	Navigator* nav;
 
 	if (debugging)
-		nav = new Navigator(&debug);
+		nav = new Navigator(125, 650-175, 0, &debug);
 	else
 		nav = new Navigator(&instTelem);
 	DigitalOut red(LED3);	
 	red.write(1);
 
+	Launcher launcherTest(LAUNCHER_RX, LAUNCHER_TX);
+	launcherTest.set_nav_ptr(nav);
+	if (debugging) {
+		debug.printf("Launcher : [Ok]\n");
+		debug.printf("Enabling launcher for 10s\n");
+	}
+	launcherTest.on();
+	//wait(1);
+	if (debugging)
+		debug.printf("Disabling launcher\n");
+	launcherTest.off();	
+
 	std::vector<vector<float> > route1;
 	std::vector<float> p11(2, 0);
-	p11[0] = 500;
+	p11[0] = 1000;
 	p11[1] = 0;
 	route1.push_back(p11);
 
@@ -145,26 +185,22 @@ int main() {
 	p41[1] = 0;
 	route4.push_back(p41);
 
-	if (debugging)
-		debug.printf("Waiting for start\n\n");
+	std::vector<vector<float> > omologation;
+	std::vector<float> pom1(2, 0);
+	pom1[0] = 200;
+	pom1[1] = 650-175;
+	omologation.push_back(pom1);
+	std::vector<float> pom2(2, 0);
+	pom2[0] = 850;
+	pom2[1] = 1190;
+	omologation.push_back(pom2);
+	std::vector<float> pom3(2, 0);
+	pom3[0] = 850;
+	pom3[1] = 400;
+	omologation.push_back(pom3);
 
-	char buff[256];
-	while (btn.read() == 0) {
-		if (debugging) {
-			if (debug.readable()) {
-				debug.gets(buff, 256);
-				debug.printf("%s\n", buff);
-				if (strcmp(buff, "Start\n")) {
-					debug.printf("Go !\n");
-					break;
-				}
-			}
-		}
-	}
-
-
-	nav->motorDebug();
-	//nav->navigate(&route1, -PI / 2);
+	//nav->motorDebug();
+	//nav->navigate(&route1, PI);
 	//lox.rangingTest(&measure, false);
 	//if (debugging)
 	//	debug.printf("MESURE : %d\n", measure.RangeMilliMeter);
@@ -172,6 +208,7 @@ int main() {
 	//nav->navigate(&route3, PI);
 	//nav->navigate(&route4, 0);
 	//nav->test(0, 0.3, 1., 0.005);
+	nav->navigate(&omologation, -PI / 2);
 
 	while (1);
 	

@@ -4,6 +4,7 @@
 #include "Encoders.hpp"
 #include "Motors.hpp"
 #include "Telemetry.hpp"
+#include "GP2.hpp"
 #include <vector>
 
 class Motors;
@@ -39,14 +40,20 @@ class Navigator
 			Used by motor instance to signal finished process;
 		*/
 		void finished();
+		void aborted();
+		bool free_to_move();
 
 		void test(float _pwm_low, float _pwm_high, int _t1, float _period);
 		void motorDebug();
+		void set_detection(bool _enable);
 		~Navigator();
 	private:
+		bool side;
 		bool debug;
 		Serial* serialOut;
 		Telemetry *instTelem;
+		GP2* instGp2;
+		Timer* current_game_time;
 		volatile bool status;
 		void go_to_i();
 		float theta_end;
