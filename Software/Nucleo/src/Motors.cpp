@@ -208,8 +208,8 @@ void Motors::routine() {
 
 	to_H_bridgeable(&right_cmd, &left_cmd);
 
-	right_motor->write(right_cmd+0.03f);
-	left_motor->write(left_cmd+0.03f);
+	right_motor->write(right_cmd+0.05f);
+	left_motor->write(left_cmd+0.05f);
 
 	dead_zone();
 }
@@ -260,6 +260,7 @@ void Motors::rotate(float _ang) {
 	y_init = instEncoders->getY();
 	ang_init = instEncoders->getTheta();
 	ang_reference = _ang - instEncoders->getTheta();
+	ang_goal = _ang;
 
 	t_cmd->reset();
 	if (debug)
@@ -515,6 +516,7 @@ void Motors::dead_zone() {
 		if (debug)
 			serialOut->printf("Regulator process ended by Timeout\n");
 		stop();
+		instNav->aborted();
 	}
 	else if ((sqrt((x_reference - instEncoders->getX())*(x_reference - instEncoders->getX()) + (y_reference - instEncoders->getY())*(y_reference - instEncoders->getY())) < TOLERANCE_POS) && (RSQR)) {
 		if (debug)
@@ -524,13 +526,13 @@ void Motors::dead_zone() {
 	}
 	else if ((NUL) && (pos_reference - ((instEncoders->getDr() + instEncoders->getDl())*PERIMETER / RESOLUTION / 2.) < TOLERANCE_POS)) {
 		if (debug)
-			serialOut->printf("Distance atteinte\n");
+			serialOut->printf("Regulator process ended by distance hit\n");
 		stop();
 		instNav->finished();
 	}
-	else if ((fabs(instEncoders->getTheta() - ang_reference) < TOLERANCE_ANG*PI/180) && ROT) {
+	else if ((fabs(instEncoders->getTheta() - ang_goal) < (TOLERANCE_ANG*PI/180)) && ROT) {
 		if (debug)
-			serialOut->printf("Regulator process ended by Goal Hit\n");
+			serialOut->printf("Regulator process ended by angle hit\n");
 		stop();
 		instNav->finished();
 	}

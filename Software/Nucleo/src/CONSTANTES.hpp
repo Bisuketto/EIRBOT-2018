@@ -16,7 +16,7 @@
 #define VITESSEMAX_ANG PI/2
 #define V_ALIM_POWER 18
 #define TOLERANCE_POS 50 //mm
-#define TOLERANCE_ANG 1
+#define TOLERANCE_ANG 5
 #define TIMEOUT 9000 //ms
 #define DIR_LENGTH 3
 #define DIM_PT 2
@@ -36,6 +36,7 @@
 
 #define THRESHOLD_GP2 0.45
 #define THRESHOLD_GP2_SIDE 0.70
+#define ECH_CONFIRM 25
 
 //Global Parameters
 

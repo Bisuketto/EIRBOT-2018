@@ -6,11 +6,14 @@
 
 class GP2 {
 	public:
-		GP2(PinName _A, PinName _B, PinName _C, PinName _D);
+		GP2(PinName _A, PinName _B, PinName _C, PinName _D, Serial* _debug = NULL);
 		~GP2();
 		bool too_close();
 		void set_enabled(bool _enable);
 	private:
+		int count;
+		bool dbg;
+		Serial* debug;
 		bool enabled;
 		AnalogIn* a;
 		AnalogIn* b;

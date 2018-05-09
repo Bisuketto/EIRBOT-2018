@@ -102,6 +102,7 @@ class Motors {
 		float theta_i;
 		float pos_reference;
 		float ang_reference;
+		float ang_goal;
 		float pos_cmd[TAILLE_TABLEAUX_POS];
 		float ang_cmd[TAILLE_TABLEAUX_ANG];
 		float pos_err[TAILLE_TABLEAUX_POS];

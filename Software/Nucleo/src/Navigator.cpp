@@ -62,6 +62,13 @@ Navigator::Navigator(float _x0, float _y0, float _theta_i)
 	g_led.write(!side);
 	r_led.write(side);
 
+	if (side == true)
+		float _x0 = 3000 - _x0;
+	if (_theta_i >= 0)
+		instMotors->rotate((side == true) ? PI - _theta_i : _theta_i);
+	else
+		instMotors->rotate((side == true) ? -PI - _theta_i : _theta_i);
+
 	i = 0;
 	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
 	instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
@@ -84,6 +91,13 @@ Navigator::Navigator(Telemetry *_telem, float _x0, float _y0, float _theta_i)
 	side = side_sw.read();
 	g_led.write(!side);
 	r_led.write(side);
+
+	if (side == true)
+		float _x0 = 3000 - _x0;
+	if (_theta_i >= 0)
+		instMotors->rotate((side == true) ? PI - _theta_i : _theta_i);
+	else
+		instMotors->rotate((side == true) ? -PI - _theta_i : _theta_i);
 
 	i = 0;
 	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
@@ -112,8 +126,15 @@ Navigator::Navigator(float _x0, float _y0, float _theta_i, Serial* _debug)
 	g_led.write(!side);
 	r_led.write(side);
 
+	if (side == true)
+		float _x0 = 3000 - _x0;
+	if (_theta_i >= 0)
+		instMotors->rotate((side == true) ? PI - _theta_i : _theta_i);
+	else
+		instMotors->rotate((side == true) ? -PI - _theta_i : _theta_i);
+
 	i = 0;
-	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
+	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR, _debug);
 	instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
 	instEncoders = new Encoders(_x0, _y0, _theta_i);
 	instMotors->set_GP2_ptr(instGp2);

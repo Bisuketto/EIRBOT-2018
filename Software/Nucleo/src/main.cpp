@@ -29,7 +29,7 @@ int main() {
 	if (debugging)
 		debug.printf("\n\nTesutou Puroguramu !\n");
 
-	/*GP2* instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
+	/*GP2* instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR, &debug);
 	bool tooclose;
 	while (1) {
 		tooclose = instGp2->too_close();
