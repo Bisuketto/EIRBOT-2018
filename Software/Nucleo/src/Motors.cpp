@@ -163,10 +163,10 @@ void Motors::routine() {
 		float ang_t = (theta_i + ang_init - theta_act) *180 / PI;
 		epsilon_ang = ang_t;// (ang_t >= PI || ang_t < -PI) ? 2 * PI - ang_t : ang_t;
 
-		if (epsilon_ang > 180)
-			epsilon_ang = -180 + fmod(epsilon_ang, 180.);
-		else if (epsilon_ang < -180)
-			epsilon_ang = 180 + fmod(epsilon_ang, 180.);
+		/*if (epsilon_ang >= 180.f)
+			epsilon_ang = 360.f - epsilon_ang;
+		else if (epsilon_ang <= -180.f)
+			epsilon_ang = -360.f - epsilon_ang;*/
 	}
 	else if (NUL) {
 		/*float Dx_act = x_init - x_act;
@@ -175,9 +175,9 @@ void Motors::routine() {
 		epsilon_pos = pos_reference_calculation_RSQR()  - ((instEncoders->getDr() + instEncoders->getDl())*PERIMETER/RESOLUTION/2.);
 		epsilon_ang = (ang_reference - instEncoders->getTheta())*180/PI;
 
-		if (epsilon_ang > 180)
+		if (epsilon_ang >= 180)
 			epsilon_ang = -180 + fmod(epsilon_ang, 180.);
-		else if (epsilon_ang < -180)
+		else if (epsilon_ang <= -180)
 			epsilon_ang = 180 + fmod(epsilon_ang, 180.);
 	}
 	else {
@@ -208,8 +208,8 @@ void Motors::routine() {
 
 	to_H_bridgeable(&right_cmd, &left_cmd);
 
-	right_motor->write(right_cmd+0.05f);
-	left_motor->write(left_cmd+0.05f);
+	right_motor->write(right_cmd+ANTI_DEAD_ZONE);
+	left_motor->write(left_cmd+ANTI_DEAD_ZONE);
 
 	dead_zone();
 }
@@ -260,7 +260,14 @@ void Motors::rotate(float _ang) {
 	y_init = instEncoders->getY();
 	ang_init = instEncoders->getTheta();
 	ang_reference = _ang - instEncoders->getTheta();
+	/*if (ang_reference > PI)
+		ang_reference = 2 * PI - ang_reference;
+	else if (ang_reference < -PI)
+		ang_reference = -2 * PI - ang_reference;*/
 	ang_goal = _ang;
+
+	if (debug)
+		serialOut->printf("Init : %f, Ref : %f, Goal : %f\n", ang_init, ang_reference, ang_goal);
 
 	t_cmd->reset();
 	if (debug)
@@ -269,7 +276,7 @@ void Motors::rotate(float _ang) {
 	if (debug)
 		serialOut->printf("Starting info routine\n");
 	if (debug)
-		schedule_infos->attach(callback(this, &Motors::send_i), 2.);
+		schedule_infos->attach(callback(this, &Motors::send_i), 0.5);
 	serialOut->attach(callback(this, &Motors::comStop));
 	serialOut->printf("RSQR : %d ROT : %d\n", RSQR, ROT);
 	status = true;
@@ -362,6 +369,7 @@ float Motors::pos_reference_calculation_RSQR() {
 	float gamma;
 
 	if (alpha < beta) {
+		estimated_time = omega;
 		if (t < alpha) {
 			return 0.5*acceleration*t*t;
 		}
@@ -377,6 +385,7 @@ float Motors::pos_reference_calculation_RSQR() {
 	}
 	else {
 		omega = 2 * sqrt(pos_reference / acceleration);
+		estimated_time = omega;
 		gamma = omega / 2;
 		if (t < gamma) {
 			return 0.5*acceleration*t*t;
@@ -407,6 +416,7 @@ float Motors::ang_reference_calculation() {
 	float gamma;
 
 	if (alpha < beta) {
+		estimated_time = omega;
 		if (t < alpha) {
 			return 0.5*acceleration*t*t;
 		}
@@ -422,6 +432,7 @@ float Motors::ang_reference_calculation() {
 	}
 	else {
 		omega = 2 * sqrt(ang_reference / acceleration);
+		estimated_time = omega;
 		gamma = omega / 2;
 		if (t < gamma) {
 			return 0.5*acceleration*t*t;
@@ -507,6 +518,10 @@ void Motors::hard_stop() {
 }
 
 void Motors::dead_zone() {
+	float angtogoal = fabs(instEncoders->getTheta() - ang_goal);
+	/*if (angtogoal >= PI)
+		angtogoal = 2*PI - angtogoal;*/
+
 	if (instNav->free_to_move() == false) {
 		if (debug)
 			serialOut->printf("Regulator process ended by game over\n");
@@ -514,23 +529,28 @@ void Motors::dead_zone() {
 	}
 	else if (instEncoders->last_changed() > TIMEOUT) {
 		if (debug)
-			serialOut->printf("Regulator process ended by Timeout\n");
+			serialOut->printf("Regulator process ended by hard Timeout\n");
+		stop();
+	}
+	/*else if (t_cmd->read_ms() > estimated_time + TIME_MARGIN) {
+		if (debug)
+			serialOut->printf("Regulator process ended by soft Timeout\n");
 		stop();
 		instNav->aborted();
-	}
+	}*/
 	else if ((sqrt((x_reference - instEncoders->getX())*(x_reference - instEncoders->getX()) + (y_reference - instEncoders->getY())*(y_reference - instEncoders->getY())) < TOLERANCE_POS) && (RSQR)) {
 		if (debug)
 			serialOut->printf("Regulator process ended by Goal Hit\n");
 		stop();
 		instNav->finished();
 	}
-	else if ((NUL) && (pos_reference - ((instEncoders->getDr() + instEncoders->getDl())*PERIMETER / RESOLUTION / 2.) < TOLERANCE_POS)) {
+	else if ((NUL) && (fabs(pos_reference - ((instEncoders->getDr() + instEncoders->getDl())*PERIMETER / RESOLUTION / 2.)) < TOLERANCE_POS)) {
 		if (debug)
 			serialOut->printf("Regulator process ended by distance hit\n");
 		stop();
 		instNav->finished();
 	}
-	else if ((fabs(instEncoders->getTheta() - ang_goal) < (TOLERANCE_ANG*PI/180)) && ROT) {
+	else if ((angtogoal < (TOLERANCE_ANG*PI/180)) && ROT) {
 		if (debug)
 			serialOut->printf("Regulator process ended by angle hit\n");
 		stop();
@@ -561,12 +581,12 @@ void Motors::send_i() {
 	if (debug) {
 		//serialOut->printf("\n(xi:%f ; yi:%f)\n", xi, yi);
 		//serialOut->printf("LastChange : %f\n", instEncoders->last_changed());
-		serialOut->printf("\n(x:%f ; y:%f) ang:%f\n", instEncoders->getX(), instEncoders->getY(), instEncoders->getTheta());
+		//serialOut->printf("\n(x:%f ; y:%f) ang:%f\n", instEncoders->getX(), instEncoders->getY(), instEncoders->getTheta());
 		//serialOut->printf("Pos reference %f\n", pos_reference);
 		//float t = t_cmd->read_us();
 		//serialOut->printf("Reference_calc %f at t=%f\n", pos_reference_calculation_RSQR(), t*0.000001);
-		serialOut->printf("PWMD:%c%f PWMG:%c%f\n", (dr == 0) ? '-' : ' ', pwr, (dl == 0) ? '-' : ' ', pwl);
-		serialOut->printf("Pos err :%f Ang err : %f\n", pos_err[0], ang_err[0]);
+		//serialOut->printf("PWMD:%c%f PWMG:%c%f\n", (dr == 0) ? '-' : ' ', pwr, (dl == 0) ? '-' : ' ', pwl);
+		//serialOut->printf("Pos err :%f Ang err : %f\n", pos_err[0], ang_err[0]);
 		//serialOut->printf("%fx+%fy+%f=0\n", (director[0][0] - director[2][0]), (director[0][1] - director[2][1]), -(director[0][0] - director[2][0])*director[0][0] - (director[0][1] - director[2][1])*director[0][1]);
 		//serialOut->printf("%s le demi plan\n", (location() == 1) ? "Dans" : "Dehors");
 		//serialOut->printf("Director N: %f,%f N-1: %f,%f\n", director[0][0], director[0][1], director[1][0], director[1][1]);
@@ -659,4 +679,8 @@ void Motors::identifier_routine() {
 
 void Motors::set_GP2_ptr(GP2* _instGP2) {
 	instGP2 = _instGP2;
+}
+
+bool Motors::get_status() {
+	return status;
 }

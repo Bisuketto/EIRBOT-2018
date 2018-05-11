@@ -13,7 +13,7 @@ Navigator::Navigator()
 	r_led.write(side);
 
 	i = 0;
-	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
+	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR, PIN_GP2_BL, PIN_GP2_BR);
 	instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
 	instEncoders = new Encoders();
 	instMotors->set_GP2_ptr(instGp2);
@@ -40,7 +40,7 @@ Navigator::Navigator(Serial* _debug)
 	r_led.write(side);
 
 	i = 0;
-	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
+	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR, PIN_GP2_BL, PIN_GP2_BR);
 	instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
 	instEncoders = new Encoders(_debug);
 	instMotors->set_GP2_ptr(instGp2);
@@ -63,14 +63,14 @@ Navigator::Navigator(float _x0, float _y0, float _theta_i)
 	r_led.write(side);
 
 	if (side == true)
-		float _x0 = 3000 - _x0;
+		_x0 = 3000 - _x0;
 	if (_theta_i >= 0)
-		instMotors->rotate((side == true) ? PI - _theta_i : _theta_i);
+		_theta_i = (side == true) ? PI - _theta_i : _theta_i;
 	else
-		instMotors->rotate((side == true) ? -PI - _theta_i : _theta_i);
+		_theta_i = (side == true) ? -PI - _theta_i : _theta_i;
 
 	i = 0;
-	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
+	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR, PIN_GP2_BL, PIN_GP2_BR);
 	instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD);
 	instEncoders = new Encoders(_x0, _y0, _theta_i);
 	instMotors->set_GP2_ptr(instGp2);
@@ -93,14 +93,14 @@ Navigator::Navigator(Telemetry *_telem, float _x0, float _y0, float _theta_i)
 	r_led.write(side);
 
 	if (side == true)
-		float _x0 = 3000 - _x0;
+		_x0 = 3000 - _x0;
 	if (_theta_i >= 0)
-		instMotors->rotate((side == true) ? PI - _theta_i : _theta_i);
+		_theta_i = (side == true) ? PI - _theta_i : _theta_i;
 	else
-		instMotors->rotate((side == true) ? -PI - _theta_i : _theta_i);
+		_theta_i = (side == true) ? -PI - _theta_i : _theta_i;
 
 	i = 0;
-	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR);
+	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR, PIN_GP2_BL, PIN_GP2_BR);
 	instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, instTelem);
 	instEncoders = new Encoders(_x0, _y0, _theta_i);
 	instMotors->set_GP2_ptr(instGp2);
@@ -127,14 +127,15 @@ Navigator::Navigator(float _x0, float _y0, float _theta_i, Serial* _debug)
 	r_led.write(side);
 
 	if (side == true)
-		float _x0 = 3000 - _x0;
+		_x0 = 3000 - _x0;
 	if (_theta_i >= 0)
-		instMotors->rotate((side == true) ? PI - _theta_i : _theta_i);
+		_theta_i = (side == true) ? PI - _theta_i : _theta_i;
 	else
-		instMotors->rotate((side == true) ? -PI - _theta_i : _theta_i);
+		_theta_i = (side == true) ? -PI - _theta_i : _theta_i;
+	serialOut->printf("\tInit with pos x : %f, y : %f, th : %f\n", _x0, _y0, _theta_i);
 
 	i = 0;
-	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR, _debug);
+	instGp2 = new GP2(PIN_GP2_FL, PIN_GP2_FR, PIN_GP2_SL, PIN_GP2_SR, PIN_GP2_BL, PIN_GP2_BR, _debug);
 	instMotors = new Motors(PIN_PWMG, PIN_PWMD, PIN_SENSMG, PIN_SENSMD, _debug);
 	instEncoders = new Encoders(_x0, _y0, _theta_i);
 	instMotors->set_GP2_ptr(instGp2);
@@ -171,7 +172,8 @@ void Navigator::finished() {
 		serialOut->printf("Arrived to %d point\n", i);
 	}
 	i++;
-	go_to_i();
+	if (status == true)
+		go_to_i();
 }
 
 void Navigator::aborted() {
@@ -181,10 +183,12 @@ void Navigator::aborted() {
 	Timer twait;
 	twait.start();
 	while (twait.read_ms() < 1000);
-	go_to_i();
+	if(status == true)
+		go_to_i();
 }
 
 void Navigator::go_to_i() {
+	instGp2->set_front(true);
 	if (debug && i < route->size()) {
 		serialOut->printf("Going to (%f, %f)\n", (*route)[i][0], (*route)[i][1]);
 	}
@@ -194,7 +198,7 @@ void Navigator::go_to_i() {
 		float y_togo = (*route)[i / 2][1];
 		float theta_togo;
 		if (side == true) {
-			float x_togo = 3000 - x_togo;
+			x_togo = 3000 - x_togo;
 		}
 		if(debug)
 			serialOut->printf("ROTATE\n");
@@ -214,7 +218,7 @@ void Navigator::go_to_i() {
 		float y_togo = (*route)[(i - 1) / 2][1];
 		float theta_togo;
 		if (side == true) {
-			float x_togo = 3000 - x_togo;
+			x_togo = 3000 - x_togo;
 		}
 		if(debug)
 			serialOut->printf("NULLE\n");
@@ -222,7 +226,7 @@ void Navigator::go_to_i() {
 		float Dx = x_togo - instEncoders->getX();
 		float Dy = y_togo - instEncoders->getY();
 		float Ddist = sqrt(Dx*Dx + Dy*Dy);
-		instMotors->go_to_Nul(Ddist, (*route)[(i-1)/2][0], (*route)[(i-1)/2][1]);
+		instMotors->go_to_Nul(Ddist, x_togo, y_togo);
 	}
 	else if(i == route->size()*2){
 		if(debug)
@@ -261,4 +265,21 @@ void Navigator::set_detection(bool _enable) {
 
 bool Navigator::free_to_move() {
 	return (current_game_time->read() < GAME_TIME) || !GAME_MODE;
+}
+
+void Navigator::rotate(float _theta) {
+	instGp2->set_front(true);
+	status = false;
+	if (_theta >= 0)
+		instMotors->rotate((side == true) ? PI - _theta : _theta);
+	else
+		instMotors->rotate((side == true) ? -PI - _theta : _theta);
+	while (instMotors->get_status() == true);
+}
+
+void Navigator::move_backward(float _dist) {
+	instGp2->set_front(false);
+	status = false;
+	instMotors->go_to_Nul(-_dist, 0, 0);
+	while (instMotors->get_status() == true);
 }

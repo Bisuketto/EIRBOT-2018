@@ -119,11 +119,11 @@ float Encoders::getY() {
 }
 
 float Encoders::getTheta() {
-	if (theta > PI)
+	/*if (theta > PI)
 		return -PI + fmod(theta, PI);
 	else if (theta < -PI)
 		return PI + fmod(theta, PI);
-	else
+	else*/
 		return theta;
 }
 

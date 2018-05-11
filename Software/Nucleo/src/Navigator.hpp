@@ -39,6 +39,10 @@ class Navigator
 		/*
 			Used by motor instance to signal finished process;
 		*/
+
+		void rotate(float _theta);
+		void move_backward(float _dist);
+
 		void finished();
 		void aborted();
 		bool free_to_move();

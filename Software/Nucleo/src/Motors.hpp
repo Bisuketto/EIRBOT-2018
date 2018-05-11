@@ -59,6 +59,7 @@ class Motors {
 
 		void identify(float _pwm_low, float _pwm_high, int _t1, float _period);
 		void identify_rotate(float _pwm_low, float _pwm_high, int _t1, float _period);
+		bool get_status();
 		~Motors();
 
 	private:
@@ -108,6 +109,7 @@ class Motors {
 		float pos_err[TAILLE_TABLEAUX_POS];
 		float ang_err[TAILLE_TABLEAUX_ANG];
 		float* director[DIR_LENGTH];
+		float estimated_time;
 		Serial* serialOut;
 		Telemetry* instTelem;
 		Ticker* schedule_routine;

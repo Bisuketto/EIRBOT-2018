@@ -63,6 +63,8 @@
 #define PIN_GP2_FR PC_0
 #define PIN_GP2_SL PC_3
 #define PIN_GP2_SR PF_3
+#define PIN_GP2_BL PF_5
+#define PIN_GP2_BR PF_10
 
 // Others
 
